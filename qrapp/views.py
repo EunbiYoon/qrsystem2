@@ -4,15 +4,13 @@ from .models import QRCodeData
 # Create your views here.
 
 def homeView(request):
-    render(request,'index.html')
+    return render(request,'index.html')
 
 def searchView(request):
-    qrcode_data=QRCodeData.objects.all()
-    return render(request,'review.html',{'qrcode_data':qrcode_data})
+    return render(request,'search.html')
 
 def scanView(request):
-    qrcode_data=QRCodeData.objects.all()
-    return render(request,'review.html',{'qrcode_data':qrcode_data})
+    return render(request,'scan.html')
 
 def genView(request):
-    return render(request,'success.html')
+    return render(request,'add.html')
