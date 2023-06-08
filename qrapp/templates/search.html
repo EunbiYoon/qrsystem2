@@ -1,27 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'index.html' %}
+
+{% block title %}Shipping Center{% endblock %}
+
+
+{% block container %}
     <h1>Scanning Results</h1>
-    <table>
+    <input type="text" id="searchInput" placeholder="Search Your Package">
+    <table id="searchTable">
         <tr>
             <th>Scan ID</th>
             <th>Scanned Data</th>
             <th>Created At</th>
         </tr>
-        {% for data in qrcode_data %}
+        {% for item in item_list %}
             <tr>
-                <th>{{data.id}}</th>
-                <th>{{data.data}}</th>
-                <th>{{data.created_at}}</th>
+                <th>{{item.id}}</th>
+                <th>{{item.data}}</th>
+                <th>{{item.created_at}}</th>
             </tr>
         {% endfor %}
     </table>
-    
-</body>
-</html>
+    <script>
+        $('#searchInput').on('keyup',function(){
+            var value=$(this).val()
+            console.log('Value: ',value)
+        })
+    </script>
+{% endblock %}

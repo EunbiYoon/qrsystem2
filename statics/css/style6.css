@@ -67,8 +67,13 @@ body{
 }
 
 /* index.html - text general settings*/
+.container a{
+    color:#58208A;
+    width:100%
+}
 .container h1{
     font-size:3rem;
+    width:100%;
     color:white;
     text-transform: capitalize;
     font-weight:800;
@@ -89,7 +94,9 @@ body{
     margin:0;
     padding-bottom:3%;
 }
-.container a{
-    color:#58208A;
-}
 
+/* table */
+table, tr, th{
+    border:1px solid grey;
+    border-collapse:collapse;
+}

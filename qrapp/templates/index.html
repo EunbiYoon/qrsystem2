@@ -2,9 +2,12 @@
 <head>
     {% load static %}
     <script src="{% static 'cdn/html5-qrcode.min.js' %}"></script>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style5.css' %}"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style6.css' %}"> 
+    <title>{% block title %}Shipping Center{% endblock %}</title>
 </head>
 <body>
+    {% block container %}
     <div class="container">
         <div class="info">
             <h1>LGEUS TN Delivery Center</h1>
@@ -31,6 +34,6 @@
             <h2>Powered By LGEUS TN R&D Eunbi Yoon</h2>
         </div>
     </div>
-
+    {% endblock %}
 </body>
 </html>
