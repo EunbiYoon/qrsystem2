@@ -1,0 +1,118 @@
+body{
+    font-family:'Nexa', sans-serif;
+    margin:0;
+}
+
+/* index.html - grid templates */
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 85% 85% 85% 85% 10%;
+    text-align: center;
+}
+.container .info{
+    grid-row:1;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://t3.ftcdn.net/jpg/03/69/69/66/240_F_369696638_Dnb4YQih8R5nW2pnTXpUjLTpwzs5TuwX.jpg');
+    background-image:url('https://t4.ftcdn.net/jpg/03/65/36/53/240_F_365365352_9E1EP9oRz5QytXx4OK2O36tLZmQTkaPk.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.container .search{
+    grid-row:2;
+    background-color: rgb(169, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image:url('https://t4.ftcdn.net/jpg/02/21/22/63/240_F_221226305_9Gij9LQt2ooEM712qQ9TDwpkXMvfqdwp.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.container .scan{
+    grid-row:3;
+    background-color: rgb(140, 0, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image:url('https://t4.ftcdn.net/jpg/02/68/61/11/240_F_268611102_4omJUfdGvvZ4xMLLn92RlA6xz4A8g4Xb.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.container .gen{
+    grid-row:4;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://t3.ftcdn.net/jpg/02/15/13/02/240_F_215130263_GyMwGP6LbToxkuVNEsy1KTv2ScfEJWoQ.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.container .foot{
+    grid-row:5;
+    color:white;
+    background-color: coral;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top:2%;
+
+}
+
+/* index.html - text general settings*/
+.container h1{
+    font-size:3rem;
+    color:white;
+    text-transform: capitalize;
+    font-weight:800;
+}
+.container h2{
+    font-size:2rem;
+    color:cornsilk;
+    text-transform: capitalize;
+    margin:0;
+}
+
+/* index.html - info */
+.container .info img{
+    width: 20%;
+}
+.container .info h3{
+    font-size:1.5rem;
+    color:white;
+    margin:0;
+    padding-bottom:3%;
+}
+
+/* index.html - data */
+
+
+
+.data-div a{
+    text-decoration: none;
+    background-color: plum;
+    font-size:1.5rem;
+    font-weight:800;
+}
+.read-div{
+    background-color: antiquewhite;
+    text-align: center;
+}
+#reader{
+    background-color: pink;
+    width:50%;
+    margin:auto;
+}
+.gen-div{
+    background-color: lavender;
+    margin:auto;
+    width: 50%;
+    text-align: center;
+}

@@ -1,0 +1,36 @@
+<html>
+<head>
+    {% load static %}
+    <script src="{% static 'cdn/html5-qrcode.min.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style5.css' %}"> 
+</head>
+<body>
+    <div class="container">
+        <div class="info">
+            <h1>LGEUS TN Delivery Center</h1>
+            <!-- <img src="https://img.icons8.com/cotton/64/cardboard-box--v1.png" alt="cardboard-box--v1"/> -->
+            <h2>Check your package shipping status in here!</h2>
+            <h3>Link With LGEUS TN Factory Security</h3>
+        </div>
+        <div class="search">
+            <a href="{% url 'review_url'%}">
+                <h1>Search Package</h1>
+            </a>
+        </div>
+        <div class="scan">
+            <a href="{% url 'review_url'%}">
+                <h1>Check Out</h1>
+            </a>
+        </div>
+        <div class="gen">
+            <a href="{% url 'review_url'%}">
+                <h1>Add New</h1>
+            </a>
+        </div>
+        <div class="foot">
+            <h2>Powered By LGEUS TN R&D Eunbi Yoon</h2>
+        </div>
+    </div>
+
+</body>
+</html>

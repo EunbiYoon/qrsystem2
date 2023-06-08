@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Scanning Results</h1>
+    <table>
+        <tr>
+            <th>Scan ID</th>
+            <th>Scanned Data</th>
+            <th>Created At</th>
+        </tr>
+        {% for data in qrcode_data %}
+            <tr>
+                <th>{{data.id}}</th>
+                <th>{{data.data}}</th>
+                <th>{{data.created_at}}</th>
+            </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>
