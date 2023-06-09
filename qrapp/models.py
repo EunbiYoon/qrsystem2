@@ -4,6 +4,7 @@ from django.db import models
 class QRCodeData(models.Model):
     data=models.CharField(max_length=255)
     created_at=models.DateTimeField(auto_now_add=True)
+    receiver=models.CharField(max_length=255)
     check_out=models.BooleanField(default=False)
     admin_check=models.BooleanField(default=False)
     

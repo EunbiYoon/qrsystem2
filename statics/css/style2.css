@@ -95,14 +95,22 @@ body{
     padding-bottom:3%;
 }
 
-/* table */
-table, tr, th{
-    border:1px solid grey;
-    border-collapse:collapse;
+/* search.html */
+.search-template {
+    width:90%;
+    margin:3% auto;
 }
-table{
-    width:100%
+.search-template input{
+    margin-bottom:1%;
+    border:1px solid pink;
+    font-size:2rem;
 }
-input{
-    margin-bottom: 10px;
+.search-template table, .search-template tr, .search-template th, .search-template td{
+    border:1px solid pink;
+    border-collapse: collapse;
+    padding:10px;
+}
+.search-template table th{
+    background-color: rgba(255, 192, 203, 0.596);
+    color:purple;
 }

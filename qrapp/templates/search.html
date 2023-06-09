@@ -1,70 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <input type="text" id="filterInput" placeholder="Filter Table" oninput="filterTable()">
-    <table id="myTable">
-        <thead>
-          <tr>
-            <th>Column1</th>
-            <th>Column2</th>
-            <!-- Add more header cells for each column -->
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>4</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td>8</td>
-          </tr>
-          <!-- Add more data rows -->
-        </tbody>
-    </table>
-    <script>
-        function filterTable() {
-            var input, filter, table, tr, td, i;
-            input = document.getElementById("filterInput");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("myTable");
-            tr = table.getElementsByTagName("tr");
+{% extends 'index.html' %}
 
-            // Loop through all table rows, and hide those that don't match the filter
-            for (i = 1; i < tr.length; i++) {
-                var match = false;
-                for (var j = 0; j < tr[i].cells.length; j++) {
-                td = tr[i].getElementsByTagName("td")[j];
-                if (td) {
-                    if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                    match = true;
-                    break;
-                    }
-                }
-                }
-                if (match) {
-                tr[i].style.display = "";
-                } else {
-                tr[i].style.display = "none";
-                }
-            }
-            }
+{% block title %}Shipping Center{% endblock %}
 
-
-    </script>
-    
-</body>
-</html>
+{% block container %}
+    <div class="search-template">
+        <input type="text" id="filterInput" placeholder="Search Your Package" oninput="filterTable()">
+        <table id="myTable">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Created At</th>
+                <th>Receiver</th>
+                <th>Check Out</th>
+                <th>Admin Check</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for item in item_list %}
+                    <tr>
+                        <td>{{ item.data }}</td>
+                        <td>{{ item.created_at }}</td>
+                        <td>{{ item.receiver }}</td>
+                        <td>{{ item.check_out }}</td>
+                        <td>{{ item.admin_check }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

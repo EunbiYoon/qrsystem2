@@ -1,46 +1,27 @@
-(function() {
-	'use strict';
+function filterTable() {
+    var input, filter, table, tr, td, i;
+    input = document.getElementById("filterInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
 
-var TableFilter = (function() {
-    var Arr = Array.prototype;
-            var input;
-    
-            function onInputEvent(e) {
-                input = e.target;
-                var table1 = document.getElementsByClassName(input.getAttribute('data-table'));
-                Arr.forEach.call(table1, function(table) {
-                    Arr.forEach.call(table.tBodies, function(tbody) {
-                        Arr.forEach.call(tbody.rows, filter);
-                    });
-                });
+    // Loop through all table rows, and hide those that don't match the filter
+    for (i = 1; i < tr.length; i++) {
+        var match = false;
+        for (var j = 0; j < tr[i].cells.length; j++) {
+        td = tr[i].getElementsByTagName("td")[j];
+        if (td) {
+            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            match = true;
+            break;
             }
+        }
+        }
+        if (match) {
+        tr[i].style.display = "";
+        } else {
+        tr[i].style.display = "none";
+        }
+    }
+}
 
-            function filter(row) {
-                var text = row.textContent.toLowerCase();
-        //console.log(text);
-        var val = input.value.toLowerCase();
-        //console.log(val);
-                row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
-            }
-
-            return {
-                init: function() {
-                    var inputs = document.getElementsByClassName('table-filter');
-                    Arr.forEach.call(inputs, function(input) {
-                        input.oninput = onInputEvent;
-                    });
-                }
-            };
-    
-        })();
-
-    /*console.log(document.readyState);
-        document.addEventListener('readystatechange', function() {
-            if (document.readyState === 'complete') {
-        console.log(document.readyState);
-                TableFilter.init();
-            }
-        }); */
-  
-    TableFilter.init(); 
-})();
