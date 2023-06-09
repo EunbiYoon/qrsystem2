@@ -3,11 +3,11 @@ body{
     margin:0;
 }
 
-/* index.html - grid templates */
+/* index.html - grid details */
 .container{
     width: 100%;
     display: grid;
-    grid-template-rows: 85% 85% 85% 85% 10%;
+    grid-detail-rows: 85% 85% 85% 85% 10%;
     text-align: center;
 }
 .container .info{
@@ -96,21 +96,33 @@ body{
 }
 
 /* search.html */
-.search-template {
+.search-detail {
     width:90%;
     margin:3% auto;
 }
-.search-template input{
+.search-detail input{
     margin-bottom:1%;
     border:1px solid pink;
     font-size:2rem;
 }
-.search-template table, .search-template tr, .search-template th, .search-template td{
+.search-detail table, .search-detail tr, .search-detail th, .search-detail td{
     border:1px solid pink;
     border-collapse: collapse;
     padding:10px;
 }
-.search-template table th{
+.search-detail table th{
     background-color: rgba(255, 192, 203, 0.596);
     color:purple;
+}
+.search-detail button{
+    background-color: pink;
+    color:navy;
+    border-radius:5px;
+    border: 1px solid deeppink;
+    font-weight:600;
+}
+.search-detail button:hover{
+    background-color:navy;
+    color:white;
+    font-weight:600;
 }

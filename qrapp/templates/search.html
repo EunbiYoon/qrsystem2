@@ -3,12 +3,12 @@
 {% block title %}Shipping Center{% endblock %}
 
 {% block container %}
-    <div class="search-template">
+    <div class="search-detail">
         <input type="text" id="filterInput" placeholder="Search Your Package" oninput="filterTable()">
         <table id="myTable">
             <thead>
               <tr>
-                <th>Data</th>
+                <th>Tracking Number</th>
                 <th>Created At</th>
                 <th>Receiver</th>
                 <th>Check Out</th>
@@ -19,10 +19,20 @@
                 {% for item in item_list %}
                     <tr>
                         <td>{{ item.data }}</td>
-                        <td>{{ item.created_at }}</td>
+                        <td>{{ item.created_at|date:"d/m/y h:i a" }}</td>
                         <td>{{ item.receiver }}</td>
-                        <td>{{ item.check_out }}</td>
-                        <td>{{ item.admin_check }}</td>
+
+                        {% if item.check_out %}
+                            <td>{{ item.check_out }}</td>
+                        {% else %}
+                            <td>{{ item.check_out }} <button>Scan</button></td>
+                        {% endif %}
+
+                        {% if item.admin_check %}
+                            <td>{{ item.admin_check }}</td>
+                        {% else %}
+                            <td>{{ item.admin_check }} <button>Scan</button></td>
+                        {% endif %}
                     </tr>
                 {% endfor %}
             </tbody>
