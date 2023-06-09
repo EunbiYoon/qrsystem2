@@ -100,3 +100,9 @@ table, tr, th{
     border:1px solid grey;
     border-collapse:collapse;
 }
+table{
+    width:100%
+}
+input{
+    margin-bottom: 10px;
+}

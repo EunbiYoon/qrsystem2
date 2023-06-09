@@ -2,28 +2,45 @@
 
 {% block title %}Shipping Center{% endblock %}
 
-
 {% block container %}
-    <h1>Scanning Results</h1>
-    <input type="text" id="searchInput" placeholder="Search Your Package">
-    <table id="searchTable">
-        <tr>
-            <th>Scan ID</th>
-            <th>Scanned Data</th>
-            <th>Created At</th>
-        </tr>
-        {% for item in item_list %}
-            <tr>
-                <th>{{item.id}}</th>
-                <th>{{item.data}}</th>
-                <th>{{item.created_at}}</th>
-            </tr>
-        {% endfor %}
-    </table>
-    <script>
-        $('#searchInput').on('keyup',function(){
-            var value=$(this).val()
-            console.log('Value: ',value)
-        })
-    </script>
+<input type="text" name="search" id="search" placeholder="Search..">
+<table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John doe</td>
+        <td>10</td>
+        <td>0987654321</td>
+      </tr>
+      <tr>
+        <td>Jane Doe</td>
+        <td>34</td>
+        <td>1234567890</td>
+      </tr>
+      <tr>
+        <td>Bart</td>
+        <td>44</td>
+        <td>1234509879</td>
+      </tr>
+    </tbody>
+</table>
+<script>
+    const searchInput=document.getElementById('search');
+    const rows=document.querySelectorAll('tbody tr');
+    // console.log(rows);
+    searchInput.addEventListener('keyup', function(event) {
+        // console.log(event);
+        const q=event.target.value.toLowerCase();
+        rows.forEach(row => {
+            row.querySelector('td').textContent.toLowerCase().startsWith(q) ? row.style.display='' : row.style.display='none'
+        });
+    });
+</script>
+
 {% endblock %}
