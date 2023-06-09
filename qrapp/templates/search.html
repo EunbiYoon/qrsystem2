@@ -38,7 +38,7 @@
         // console.log(event);
         const q=event.target.value.toLowerCase();
         rows.forEach(row => {
-            row.querySelector('td').textContent.toLowerCase().startsWith(q) ? row.style.display='' : row.style.display='none'
+            row.querySelector('td').textContent.toLowerCase().startsWith(q) ? (row.style.display='table-row') : (row.style.display='none');
         });
     });
 </script>
