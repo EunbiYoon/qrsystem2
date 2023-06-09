@@ -7,7 +7,7 @@ body{
 .container{
     width: 100%;
     display: grid;
-    grid-detail-rows: 85% 85% 85% 85% 10%;
+    grid-template-rows: 85% 85% 85% 85% 10%;
     text-align: center;
 }
 .container .info{
@@ -104,6 +104,14 @@ body{
     margin-bottom:1%;
     border:1px solid pink;
     font-size:2rem;
+    color:rgb(255, 115, 138);
+    background-color:antiquewhite;
+}
+.search-detail input:focus{
+    border-color:blue;
+}
+.search-detail input:blank{
+    border-color:purple;
 }
 .search-detail table, .search-detail tr, .search-detail th, .search-detail td{
     border:1px solid pink;
@@ -112,7 +120,7 @@ body{
 }
 .search-detail table th{
     background-color: rgba(255, 192, 203, 0.596);
-    color:purple;
+    color:navy;
 }
 .search-detail button{
     background-color: pink;

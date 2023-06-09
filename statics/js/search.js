@@ -25,3 +25,12 @@ function filterTable() {
     }
 }
 
+const myInput = document.getElementById("myInput");
+myInput.addEventListener("input",function(){
+    if(myInput.value===""){
+        myInput.classList.add("blank");
+    }
+    else{
+        myInput.classList.remove("blank");
+    }
+});

@@ -4,7 +4,7 @@
 
 {% block container %}
     <div class="search-detail">
-        <input type="text" id="filterInput" placeholder="Search Your Package" oninput="filterTable()">
+        <input type="text" id="filterInput" placeholder="Search Your Package" oninput="filterTable()" required pattern="\S+.*" >
         <table id="myTable">
             <thead>
               <tr>
