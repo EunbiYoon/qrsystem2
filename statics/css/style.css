@@ -71,14 +71,21 @@ body{
     color:#58208A;
     width:100%
 }
-.container h1{
+.container .main{
     font-size:3rem;
     width:100%;
     color:white;
     text-transform: capitalize;
     font-weight:800;
 }
-.container h1:hover{
+.container .menu{
+    font-size:3rem;
+    width:100%;
+    color:white;
+    text-transform: capitalize;
+    font-weight:800;
+}
+.container .menu:hover{
     color:#58208A;
     background-color: beige;
 }
@@ -122,15 +129,43 @@ body{
     background-color: rgba(255, 192, 203, 0.596);
     color:navy;
 }
-.search-detail button{
+.search-detail a{
     background-color: pink;
     color:navy;
     border-radius:5px;
     border: 1px solid deeppink;
     font-weight:600;
+    text-decoration: none;
 }
-.search-detail button:hover{
+.search-detail a:hover{
     background-color:navy;
     color:white;
     font-weight:600;
+}
+
+/* scan.html */
+.scan-main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:pink;
+    height:100%;
+    font-size:2rem;
+}
+.scan-main .scan-reader{
+    width: 600px;
+    background-color: yellowgreen;
+}
+.scan-main .scan-result{
+    text-align: center;
+}
+.scan-main #reader__scan_region img{
+    width:200;
+    height:200;
+}
+.scan-main #html5-qrcode-button-camera-permission{
+    background-color: skyblue;
+    color:white;
+    border:1px solid blue;
+    border-radius: 10px;
 }

@@ -1,6 +1,6 @@
 {% extends 'index.html' %}
 
-{% block title %}Shipping Center{% endblock %}
+{% block title %}Search Package{% endblock %}
 
 {% block container %}
     <div class="search-detail">
@@ -25,13 +25,19 @@
                         {% if item.check_out %}
                             <td>{{ item.check_out }}</td>
                         {% else %}
-                            <td>{{ item.check_out }} <button>Scan</button></td>
+                            <td>
+                                {{ item.admin_check }} 
+                                <a href="{% url 'scan_url' %}">Scan</a>
+                            </td>
                         {% endif %}
 
                         {% if item.admin_check %}
                             <td>{{ item.admin_check }}</td>
                         {% else %}
-                            <td>{{ item.admin_check }} <button>Scan</button></td>
+                            <td>
+                                {{ item.admin_check }} 
+                                <a href="{% url 'scan_url' %}">Scan</a>
+                            </td>
                         {% endif %}
                     </tr>
                 {% endfor %}

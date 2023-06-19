@@ -1,34 +1,22 @@
-function genQR(){
-    var gapi="https://chart.googleapis.com/chart?chf=bg,s,65432100&cht=qr&chs=";
+var scanner= new Html5QrcodeScanner('reader',{
+    qrbox:{
+        width:250,
+        height:250,
+    },
+    fps:20,
+});
+scanner.render(success, error);
 
-    // edit the qr code information
-    var myimg=document.getElementById("img");
-    var mytext=document.getElementById("qrtext").value;
-    var mysize=document.getElementById("size").value;
+function success(result) {
+    document.getElementById('result').innerHTML = `
+    <h2>Success!</h2>
+    <p><a href="${result}">${result}</a></p>
+    `;
 
-    // check textarea
-    if (mytext!=="" && mysize=="100")
-    {
-        myimg.src=gapi+"100x100"+"&chl="+mytext
-    }
-    else if (mytext!=="" && mysize=="150")
-    {
-        myimg.src=gapi+"150x150"+"&chl="+mytext
-    }
-    else if (mytext!=="" && mysize=="200")
-    {
-        myimg.src=gapi+"200x200"+"&chl="+mytext
-    }
-    else if (mytext!=="" && mysize=="250")
-    {
-        myimg.src=gapi+"250x250"+"&chl="+mytext
-    }
-    else if (mytext!=="" && mysize=="300")
-    {
-        myimg.src=gapi+"300x300"+"&chl="+mytext
-    }
-    // textarea empty
-    else{
-        alert("Please Enter Text");
-    }
+    scanner.clear();
+
+    document.getElementById('reader').remove();
+}
+function error(err){
+    console.error(err);
 }
