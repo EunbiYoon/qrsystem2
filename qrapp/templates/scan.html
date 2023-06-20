@@ -6,7 +6,9 @@
     {% load static %}
     <script src="{% static 'js/html5-qrcode.min.js' %}"></script>
     <div class="scan">
-        <h1 class="scan-title">Scan Your Package</h1>
+        <div class="scan-title">
+            <h1>Scan Your Package</h1>
+        </div>
         <div class="scan-main">
             <div class="scan-reader" id="reader"></div>
             <div class="scan-result" id="result"></div>
@@ -36,3 +38,4 @@
         }
     </script>
 {% endblock %}
+</div>

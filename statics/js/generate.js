@@ -1,5 +1,5 @@
 function genQR(){
-    var gapi="https://chart.googleapis.com/chart?chf=bg,s,65432100&cht=qr&chs=";
+    var gapi="https://chart.googleapis.com/chart?cht=qr&chs=";
 
     // edit the qr code information
     var myimg=document.getElementById("img");
@@ -28,7 +28,7 @@ function genQR(){
         myimg.src=gapi+"300x300"+"&chl="+mytext
     }
     // textarea empty
-    else{
+    else
+    {
         alert("Please Enter Text");
-    }
-}
+    }}

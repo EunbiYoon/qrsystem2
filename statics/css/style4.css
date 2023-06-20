@@ -3,6 +3,7 @@ body{
     margin:0;
 }
 
+
 /* index.html - grid details */
 .container{
     width: 100%;
@@ -63,7 +64,7 @@ body{
     align-items: center;
     justify-content: center;
     padding-top:2%;
-
+    padding-bottom:5%
 }
 
 /* index.html - text general settings*/
@@ -144,22 +145,31 @@ body{
 }
 
 /* scan.html */
+.scan{
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image:url('https://as1.ftcdn.net/v2/jpg/04/43/27/64/1000_F_443276418_f5KzpPzH8ksaGoRlTnio2AI0yhpo0rzL.jpg');
+}
+.scan-title h1{
+    font-size:3rem;
+    font-weight: 800;
+    color:blue;
+    padding:1%;
+    display:flex;
+    text-align: center;
+}
 .scan-main{
     display:flex;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
     background-color:rgb(224, 224, 224);
     font-size:2rem;
-}
-.scan-title{
-    font-size:2rem;
-    color:blue;
-    text-align: center;
-    padding:1%;
 }
 .scan-main .scan-reader{
     width: 600px;
     background-color: rgb(194, 255, 250);
+    width: 100%;
 }
 .scan-main .scan-result{
     text-align: center;
@@ -191,4 +201,43 @@ body{
     color:white;
     border:1px solid blue;
     border-radius: 10px;
+}
+
+/* add.html*/
+.generate{
+    background-color: #606468;
+    font-size:3rem;
+    padding:5% 0;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+.generate h2{
+    font-size:6rem;
+    margin-top:30%;
+    margin-bottom:10%
+}
+.generate .generate-content{
+    background-color:coral;
+    margin:auto;
+    text-align: center;
+    width: max-content;
+    padding:3%;
+    font-size:6rem;
+    margin:auto;
+}
+.generate .generate-content img{
+    margin:0 0 16% 0;
+}
+.generate option{
+    font-size:1rem;
+}
+.generate input{
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+.generate input:hover{
+    background-color: darksalmon;
+    color:whitesmoke;
 }
