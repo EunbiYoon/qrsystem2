@@ -5,9 +5,12 @@
 {% block container %}
     {% load static %}
     <script src="{% static 'js/html5-qrcode.min.js' %}"></script>
-    <div class="scan-main">
-        <div class="scan-reader" id="reader"></div>
-        <div class="scan-result" id="result"></div>
+    <div class="scan">
+        <h1 class="scan-title">Scan Your Package</h1>
+        <div class="scan-main">
+            <div class="scan-reader" id="reader"></div>
+            <div class="scan-result" id="result"></div>
+        </div>
     </div>
     <script>
         const scanner= new Html5QrcodeScanner('reader',{
