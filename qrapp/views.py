@@ -16,12 +16,15 @@ class searchView(ListView):
 
 def scanView(request):
     if request.method=='POST':
-        code_data=request.POST.get('scan-result')
-        qr_code_scan=QRCodeData(data=code_data)
+        scan_code=request.POST.get('scanned_data')
+        print("Scan_code "+str(scan_code))
+        qr_code_scan=QRCodeData(code_data=scan_code)
         qr_code_scan.save()
-        messages.success(request, 'QR Code scanning data saved succefully!')
-        return render(request,'success.html')
+        return render(request,'success.html', {'sucess_message':'QR code scanning data saves successfully'})
     return render(request,'scan.html')
 
 def genView(request):
     return render(request,'add.html')
+
+def successView(request):
+    return render(request,'success.html')
