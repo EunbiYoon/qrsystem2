@@ -151,13 +151,23 @@ body{
     height: 100%;
     background-image:url('https://as1.ftcdn.net/v2/jpg/04/43/27/64/1000_F_443276418_f5KzpPzH8ksaGoRlTnio2AI0yhpo0rzL.jpg');
 }
+.scan-title{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 .scan-title h1{
+    grid-column: 1;
     font-size:3rem;
     font-weight: 800;
     color:blue;
     padding:1%;
     display:flex;
-    text-align: center;
+    text-align: left;
+}
+.scan-title a{
+    grid-column: 2;
+    text-align: right;
+    font-size: 3rem;
 }
 .scan-main{
     display:flex;
