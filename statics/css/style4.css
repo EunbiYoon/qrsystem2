@@ -346,30 +346,6 @@ body{
     background-color: rgb(224, 224, 224);
     background-image:url('https://as1.ftcdn.net/v2/jpg/04/43/27/64/1000_F_443276418_f5KzpPzH8ksaGoRlTnio2AI0yhpo0rzL.jpg');
 }
-.checkout-top{
-    display: grid;
-    grid-template-columns: 11fr 1fr 1fr;
-}
-.checkout-top h1{
-    grid-column: 1;
-    font-size:3rem;
-    font-weight: 800;
-    color:blue;
-    padding:1%;
-    text-align:center;
-}
-.checkout-top .home_tag{
-    grid-column: 2;
-    text-align: right;
-    font-size: 3rem;
-}
-.checkout-top .search_tag{
-    grid-column: 3;
-    text-align: left;
-    padding-left:5%;
-    font-size: 3rem;
-}
-
 .checkout-container{
     background-color: rgb(192, 255, 193);
     text-align: center;
