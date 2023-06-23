@@ -3,6 +3,7 @@
 {% block title %}Search Package{% endblock %}
 
 {% block container %}
+    <a href="{% url 'home_url' %}">Home</a>
     <div class="search-detail">
         <input type="text" id="filterInput" placeholder="Search Your Package" oninput="filterTable()" required pattern="\S+.*" >
         <table id="myTable">
@@ -27,7 +28,7 @@
                         {% else %}
                             <td>
                                 {{ item.admin_check }} 
-                                {% if username is item.receiver %}
+                                {% if username == item.receiver %}
                                     <a href="{% url 'checkout_url' %}">Scan</a>
                                 {% endif %}
                             </td>
