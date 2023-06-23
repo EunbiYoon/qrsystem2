@@ -3,6 +3,7 @@ from django.views import View
 from .models import QRCodeData
 from django.contrib import messages
 from django.views.generic import TemplateView, ListView
+from django.http import JsonResponse
 # Create your views here.
 
 class homeView(TemplateView):
@@ -27,6 +28,15 @@ def genView(request):
     return render(request,'add.html')
 
 def checkoutView(request):
+    if request.method=='POST':
+        scan_track=request.POST.get('result')
+        try:
+            entry=QRCodeData.objects.get(code_data=scan_track)
+            entry.check_out=True
+            entry.save()
+            return JsonResponse({'message':'Status Changed Successfully'})
+        except QRCodeData.DoesNotExist:
+            return JsonResponse({'message':'No mathcing entry found.'}, status=404)
     return render(request,'checkout.html')
 
 def successView(request):

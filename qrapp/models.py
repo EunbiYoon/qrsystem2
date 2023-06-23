@@ -9,7 +9,7 @@ class QRCodeData(models.Model):
     admin_check=models.BooleanField(default=False)
     
     def __str__(self):
-        return str(self.data)+ ' | Updated at ' + str(self.created_at.strftime('%Y-%m-%d %H:%M:%S'))
+        return str(self.code_data)+ ' | Updated at ' + str(self.created_at.strftime("%Y-%m-%d %H:%M:%S"))
     class Meta:
         verbose_name_plural='QR Scanning Data'
 
