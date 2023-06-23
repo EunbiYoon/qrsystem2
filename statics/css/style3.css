@@ -275,3 +275,95 @@ body{
     background-color: darksalmon;
     color:whitesmoke;
 }
+
+/* checkout.html */
+.checkout{
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgb(224, 224, 224);
+    background-image:url('https://as1.ftcdn.net/v2/jpg/04/43/27/64/1000_F_443276418_f5KzpPzH8ksaGoRlTnio2AI0yhpo0rzL.jpg');
+}
+.checkout-top{
+    display: grid;
+    grid-template-columns: 11fr 1fr 1fr;
+}
+.checkout-top h1{
+    grid-column: 1;
+    font-size:3rem;
+    font-weight: 800;
+    color:blue;
+    padding:1%;
+    text-align:center;
+}
+.checkout-top .home_tag{
+    grid-column: 2;
+    text-align: right;
+    font-size: 3rem;
+}
+.checkout-top .search_tag{
+    grid-column: 3;
+    text-align: left;
+    padding-left:5%;
+    font-size: 3rem;
+}
+
+.checkout-container{
+    background-color: rgb(192, 255, 193);
+    text-align: center;
+    font-size:2rem;
+    padding:2%
+}
+
+.checkout-package{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(210, 161, 161);
+}
+.checkout-package .reader{
+    width: 600px;
+    background-color: rgb(194, 255, 250);
+    width: 100%;
+}
+.checkout-package .result{
+    text-align: center;
+}
+.checkout-package #reader__checkout_region img{
+    width:200;
+    height:200;
+}
+.checkout-package .checkout-reader img[alt="Info icon"]{
+    display: none;
+}
+.checkout-package #html5-qrcode-button-camera-permission{
+    background-color: skyblue;
+    color:white;
+    border:1px solid blue;
+    border-radius: 10px;
+}
+.checkout-package #html5-qrcode-anchor-checkout-type-change{
+    margin-top:10%;
+    /* background-color: skyblue; */
+    color:blue;
+    /* border:1px solid blue; */
+    border-radius: 10px;
+    text-decoration: none;
+}
+.checkout-package #html5-qrcode-button-file-selection{
+    background-color: skyblue;
+    color:white;
+    border:1px solid blue;
+    border-radius: 10px;
+}
+.checkout-receive{
+    background-color: beige;
+}
+.checkout-submit{
+    background-color:cadetblue;
+    text-align: center;
+    font-size:2rem;
+}
+.checkout-submit button{
+    background-color: #58208A;
+}

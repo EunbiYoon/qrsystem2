@@ -1,8 +1,31 @@
 {% extends 'index.html' %}
 
-{% block title %}Scan Package{% endblock %}
+{% block title %}checkout Package{% endblock %}
 
 {% block container %}
-<h1>Checkout</h1>
+    <div class="checkout">
+        <div class="checkout-top">
+            <h1>Checkout Your Package</h1>
+            <a class="home_tag" href="{% url 'search_url' %}">Search</a>
+            <a class="search_tag" href="{% url 'home_url' %}">Home</a>
+        </div>
+        <div class="checkout-container">
+            <form method="post" action="{% url 'checkout_url' %}">
+                {% csrf_token %}
+                <div class="checkout-package">
+                    <h1>Tracking Number</h1>
+                    <div name="reader" class="reader" id="reader"></div>
+                    <input type="text" class="result" name="result" id="result" placeholder="checkout or Type Manually">
+                </div>
+                <div class="checkout-submit">
+                    <h1>Click Save!</h1>
+                    <button id="submit" type="submit">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% load static %}
+    <script src="{% static 'js/html5-qrcode.min.js' %}"></script>
+    <script src="{% static 'js/checkout.js' %}"></script>
 
 {% endblock %}
