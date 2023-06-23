@@ -34,12 +34,12 @@
                         {% if item.admin_check %}
                             <td>{{ item.admin_check }}</td>
                         {% else %}
-                            {% if request.user.is_superuser %}
                             <td>
                                 {{ item.admin_check }} 
-                                <a href="{% url 'checkout_url' %}">Scan</a>
+                                {% if user.is_superuser %}
+                                    <a href="{% url 'checkout_url' %}">Scan</a>
+                                {% endif %}
                             </td>
-                            {% endif %}
                         {% endif %}
                     </tr>
                 {% endfor %}
