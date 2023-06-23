@@ -24,10 +24,10 @@
                         <td>{{ item.receiver }}</td>
 
                         {% if item.check_out %}
-                            <td>{{ item.check_out }}</td>
+                            <td>Yes</td>
                         {% else %}
                             <td>
-                                {{ item.admin_check }} 
+                                No 
                                 {% if username == item.receiver %}
                                     <a href="{% url 'checkout_url' %}">Scan</a>
                                 {% endif %}
@@ -35,10 +35,10 @@
                         {% endif %}
 
                         {% if item.admin_check %}
-                            <td>{{ item.admin_check }}</td>
+                            <td>Yes</td>
                         {% else %}
                             <td>
-                                {{ item.admin_check }} 
+                                No
                                 {% if user.is_superuser %}
                                     <a href="{% url 'checkout_url' %}">Scan</a>
                                 {% endif %}
