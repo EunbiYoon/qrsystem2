@@ -179,6 +179,9 @@ body{
     color:coral;
     background-color:white;
 }
+.search-detail input::placeholder{
+    color:coral;
+}
 .search-detail table, .search-detail tr, .search-detail th, .search-detail td{
     border:2px solid rgb(176, 166, 154);
     border-collapse: collapse;
