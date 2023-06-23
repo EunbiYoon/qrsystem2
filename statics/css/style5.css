@@ -273,6 +273,7 @@ body{
 .scan-submit button{
     background-color: #58208A;
 }
+
 /* checkout.html */
 .checkout{
     justify-content: center;
@@ -285,7 +286,7 @@ body{
     background-color: rgb(222, 242, 189);
     text-align: center;
     font-size:2rem;
-    padding:2%
+    padding:2%;
 }
 .checkout-package{
     display:grid;
@@ -293,6 +294,7 @@ body{
     align-items: center;
     background-color:white;
     border-radius: 10px;
+    padding:6%;
 }
 .checkout-package .reader{
     width: 600px;
@@ -300,44 +302,31 @@ body{
     width: 100%;
     border-radius: 15px 15px 0 0;
 }
+.checkout-package .reader::before{
+    content:"Scan QR or Barcode";
+}
 .checkout-package .result{
     text-align: center;
     border-radius: 0 0 15px 15px;
 }
-.checkout-package #reader__checkout_region img{
-    width:200;
-    height:200;
+.checkout-package #reader__scan_region{
+    display: none;
 }
-.checkout-package .checkout-reader img[alt="Info icon"]{
+.checkout-package img[alt="Info icon"]{
     display: none;
 }
 .checkout-package #html5-qrcode-button-camera-permission{
-    background-color: skyblue;
+    background-color:green;
     color:white;
-    border:1px solid blue;
     border-radius: 10px;
 }
-.checkout-package #html5-qrcode-anchor-checkout-type-change{
-    margin-top:10%;
-    /* background-color: skyblue; */
-    color:blue;
-    /* border:1px solid blue; */
-    border-radius: 10px;
-    text-decoration: none;
-}
-.checkout-package #html5-qrcode-button-file-selection{
-    background-color: skyblue;
+.checkout-package #html5-qrcode-anchor-scan-type-change{
+    background-color: navy;
     color:white;
-    border:1px solid blue;
-    border-radius: 10px;
 }
-.checkout-receive{
-    background-color: beige;
-}
-.checkout-submit{
-    background-color:cadetblue;
-    text-align: center;
-    font-size:2rem;
+.checkout-package .choose{
+    border-left:1px grey solid;
+    border-right:1px grey solid;
 }
 .checkout button{
     background-color:navy;
@@ -346,6 +335,7 @@ body{
     font-size: 1.5rem;
     margin:1%
 }
+
 /* add.html*/
 .generate{
     background-color: #606468;
