@@ -34,9 +34,9 @@ def checkoutView(request):
             entry=QRCodeData.objects.get(code_data=scan_track)
             entry.check_out=True
             entry.save()
-            return JsonResponse({'message':'Status Changed Successfully'})
+            return render(request,'checkout_success.html')
         except QRCodeData.DoesNotExist:
-            return JsonResponse({'message':'No mathcing entry found.'}, status=404)
+            return render(request,'checkout_fail.html')
     return render(request,'checkout.html')
 
 def successView(request):
