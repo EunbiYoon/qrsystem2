@@ -1,20 +1,29 @@
+from typing import Any
 from django.shortcuts import render
 from django.views import View
 from .models import QRCodeData
 from django.contrib import messages
 from django.views.generic import TemplateView, ListView
-from django.http import JsonResponse
+from django.contrib.auth.mixins import LoginRequiredMixin
+from user.models import User
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 
 class homeView(TemplateView):
     template_name='index.html'
 
-class searchView(ListView):
-    template_name='search.html'
-    context_object_name='item_list'
-    def get_queryset(self):
-        return QRCodeData.objects.all()
+@login_required
+def searchView(request):
+    item_list=QRCodeData.objects.all()
+    username=request.user.username
+    context={
+        'item_list':item_list,
+        'username':username
+    }
+    return render(request, 'search.html', context)
 
+@login_required
 def scanView(request):
     if request.method=='POST':
         scan_track=request.POST.get('result')
@@ -24,9 +33,11 @@ def scanView(request):
         return render(request,'success.html', {'sucess_message':'QR code scanning data saves successfully'})
     return render(request,'scan.html')
 
+@login_required
 def genView(request):
     return render(request,'add.html')
 
+@login_required
 def checkoutView(request):
     if request.method=='POST':
         scan_track=request.POST.get('result')
@@ -39,5 +50,6 @@ def checkoutView(request):
             return render(request,'checkout_fail.html')
     return render(request,'checkout.html')
 
+@login_required
 def successView(request):
     return render(request,'success.html')

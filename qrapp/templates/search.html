@@ -27,7 +27,9 @@
                         {% else %}
                             <td>
                                 {{ item.admin_check }} 
-                                <a href="{% url 'checkout_url' %}">Scan</a>
+                                {% if username is item.receiver %}
+                                    <a href="{% url 'checkout_url' %}">Scan</a>
+                                {% endif %}
                             </td>
                         {% endif %}
 
