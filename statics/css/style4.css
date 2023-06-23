@@ -33,7 +33,6 @@ body{
     background-color: whitesmoke;
 }
 .base-foot{
-    height:8%;
     bottom:0;
     color:coral;
     background-color: antiquewhite;
@@ -87,7 +86,7 @@ body{
     padding-bottom:55px;
 }
 .home-scan{
-    background-color:rgb(241, 235, 175);
+    background-color:rgb(222, 242, 189);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,7 +94,7 @@ body{
     padding-bottom:55px;
 }
 .home-add{
-    background-color:rgb(222, 242, 189);
+    background-color:rgb(215, 211, 162);
     display: flex;
     flex-direction: column;
     align-items: center;
