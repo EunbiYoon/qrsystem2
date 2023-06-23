@@ -174,25 +174,26 @@ body{
 }
 .search-detail input{
     margin-bottom:1%;
-    border:3px solid pink;
+    border:3px solid rgb(176, 166, 154);
     font-size:2rem;
-    color:rgb(255, 115, 138);
-    background-color:antiquewhite;
+    color:coral;
+    background-color:white;
 }
 .search-detail table, .search-detail tr, .search-detail th, .search-detail td{
-    border:1px solid pink;
+    border:2px solid rgb(176, 166, 154);
     border-collapse: collapse;
     padding:10px;
 }
 .search-detail table th{
-    background-color: rgba(255, 192, 203, 0.596);
-    color:navy;
+    background-color: antiquewhite;
+    color:black;
 }
 .search-detail a{
-    background-color: pink;
-    color:navy;
+    background-color: antiquewhite;
+    color:coral;
     border-radius:5px;
-    border: 1px solid deeppink;
+    padding:2px;
+    border: 1px solid coral;
     font-weight:600;
     text-decoration: none;
 }
