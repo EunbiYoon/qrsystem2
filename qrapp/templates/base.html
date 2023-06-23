@@ -12,14 +12,19 @@
     <div class="base-wrapper">
         <div class="base-top">
             <div class="base-title">
-                <h2>LGEUS TN Delivery Center</h2>
+                <h3>LGETN Delivery Center</h3>
+            </div>
+            <div class="base-menu">
+                <a href="{% url 'home_url' %}"><h4>Home</h4></a>
+                <a href="{% url 'search_url' %}"><h4>Search</h4></a>
+                <a href="{% url 'checkout_url' %}"><h4>Checkout</h4></a>
+                <a href="{% url 'add_url' %}"><h4>Add</h4></a>
             </div>
             <div class="base-login">
                 {% if user.is_authenticated %}
                     <div class="msg"><h4>Hello, {{user.username}}</h4></div>
                     <div class="lik">
                         <a href="{% url 'logout_url' %}"><h4>Logout</h4></a>
-                        {% block home %}{% endblock %}
                     </div>
                 {% else %}
                     <div class="msg"><h4>Login Here</h4></div>

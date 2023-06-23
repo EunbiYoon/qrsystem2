@@ -13,21 +13,47 @@ body{
     color:white;
     background-color: coral;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 3fr 1fr;
     padding:1%;
 }
 .base-top .base-title{
     display: flex;
     align-items: center;
 }
+.base-top .base-menu{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    align-items: center;
+}
+.base-top .base-menu a{
+    text-decoration: none;
+    color:white;
+    text-align: center;
+    border-left:2px solid white;
+}
+.base-top .base-menu a:hover{
+    color:rgb(3, 104, 70);
+}
+
+
 .base-top .base-login{
-    text-align: right;
+    border: 2px solid white;
+    border-radius: 15px;
+    text-align: center;
 }
 .base-top .base-login .msg{
     grid-row:1;
 }
 .base-top .base-login .lik{
     grid-row:2;
+    display: grid;
+}
+.base-top .base-login .lik a{   
+    text-decoration: none;
+    color:navy;
+}
+.base-top .base-login .lik a:hover{   
+    color:rgb(3, 104, 70);
 }
 .base-container{
     background-color: whitesmoke;
