@@ -27,17 +27,15 @@ body{
 }
 .base-top .base-menu a{
     text-decoration: none;
-    color:white;
+    color:antiquewhite;
     text-align: center;
-    border-left:2px solid white;
+    border-left:2px solid antiquewhite;
 }
-.base-top .base-menu a:hover{
-    color:rgb(3, 104, 70);
+.base-top a:hover{
+    color:navy;
 }
-
-
 .base-top .base-login{
-    border: 2px solid white;
+    border: 2px solid antiquewhite;
     border-radius: 15px;
     text-align: center;
 }
@@ -50,10 +48,10 @@ body{
 }
 .base-top .base-login .lik a{   
     text-decoration: none;
-    color:navy;
+    color:antiquewhite;
 }
 .base-top .base-login .lik a:hover{   
-    color:rgb(3, 104, 70);
+    color:navy;
 }
 .base-container{
     background-color: whitesmoke;
