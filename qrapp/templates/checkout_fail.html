@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+
+{% block title %}Scan Package{% endblock %}
+
+{% block container %}
+    <h1>Scanning is failed</h1>
+    <a href="{% url 'checkout_url' %}">Try Again</a>
+    <a href="{% url 'searcg_url' %}">Go Back</a>
+{% endblock %}
