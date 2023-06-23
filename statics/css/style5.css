@@ -32,7 +32,7 @@ body{
     border-left:2px solid antiquewhite;
 }
 .base-top a:hover{
-    color:navy;
+    color:rgb(107, 87, 60);;
 }
 .base-top .base-login{
     border: 2px solid antiquewhite;
@@ -296,14 +296,26 @@ body{
     border-radius: 10px;
     padding:6%;
 }
+/* frame of checkout*/
+.checkout-package .choose{
+    border-left:1px #CDC8C2 solid;
+    border-right:1px #CDC8C2 solid;
+    color:rgb(107, 87, 60);
+    font-weight: 600;
+}
+.checkout-package h1{
+    color:coral;
+}
 .checkout-package .reader{
     width: 600px;
-    background-color:rgb(224, 224, 224);
+    background-color:antiquewhite;
     width: 100%;
     border-radius: 15px 15px 0 0;
 }
 .checkout-package .reader::before{
     content:"Scan QR or Barcode";
+    color:rgb(107, 87, 60);
+    font-weight:600;
 }
 .checkout-package .result{
     text-align: center;
@@ -315,62 +327,98 @@ body{
 .checkout-package img[alt="Info icon"]{
     display: none;
 }
-.checkout-package #html5-qrcode-button-camera-permission{
-    background-color:green;
+.checkout-package .html5-qrcode-element{
+    background-color:coral;
     color:white;
     border-radius: 10px;
+    font-size:1.5rem;
+    width: 90%;
+    text-decoration: none !important;
+    border:none;
+    padding:1%;
+    text-align: center;
 }
-.checkout-package #html5-qrcode-anchor-scan-type-change{
-    background-color: navy;
+.checkout-package span:hover{
+    background-color:rgb(107, 87, 60);
     color:white;
 }
-.checkout-package .choose{
-    border-left:1px grey solid;
-    border-right:1px grey solid;
+.checkout-package .result{
+    color:coral;
+    font-weight:600;
+    background-color: antiquewhite;
+    border:1px solid #CDC8C2;
 }
-.checkout button{
-    background-color:navy;
-    color:antiquewhite;
+.checkout-package input::placeholder{
+    color:rgb(107, 87, 60);
+    font-weight:600;
+}
+.checkout-package button:hover{
+    background-color:rgb(107, 87, 60);
+    color:white;
+}
+.checkout-package button{
+    background-color:rgb(222, 242, 189);
+    color:coral;
+    border:1px solid #CDC8C2;
     border-radius: 10px;
-    font-size: 1.5rem;
-    margin:1%
+    font-size: 2rem;
+    margin:1%;
 }
 
 /* add.html*/
 .generate{
-    background-color: #606468;
-    font-size:3rem;
-    padding:5% 0;
+    background-color:white;
+    font-size:2rem;
+    padding:4% 0;
     height: 100%;
     justify-content: center;
     align-items: center;
-    color:white;
-}
-.generate h2{
-    font-size:6rem;
-    margin-top:30%;
-    margin-bottom:10%
+    color:coral;
 }
 .generate .generate-content{
-    background-color:coral;
+    background-color:rgb(228, 223, 216);
+    border-radius: 10px;
     margin:auto;
     text-align: center;
     width: max-content;
     padding:3%;
-    font-size:6rem;
     margin:auto;
 }
 .generate .generate-content img{
     margin:0 0 16% 0;
 }
 .generate option{
-    font-size:1rem;
+    font-size:1.2rem;
+    font-weight: 500;
+    color:coral;
+}
+.generate #size{
+    font-size:1.5rem;
+    font-weight: 500;
+    color:coral; 
+    border-radius: 10px;
+    border:2px solid rgb(107, 87, 60);
+}
+.generate textarea{
+    font-size:1.5rem;
+    color:coral;
+    background-color:#FFFFFF;
+    border-radius: 10px;
+    border:2px solid rgb(107, 87, 60);
+    font-weight: 600;
 }
 .generate input{
-    background-color: antiquewhite;
+    background-color:#FFFFFF;
+    color:coral;
     border-radius: 10px;
+    font-size:1.5rem;
+    border:2px solid rgb(107, 87, 60);
 }
 .generate input:hover{
-    background-color: darksalmon;
-    color:whitesmoke;
+    background-color: rgb(107, 87, 60);
+    color:#FFFFFF;
+}
+.generate textarea::placeholder{
+    color:coral;
+    font-size:1ren;
 }

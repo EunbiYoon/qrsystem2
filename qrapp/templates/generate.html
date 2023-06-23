@@ -4,8 +4,8 @@
 
 {% block container %}
     <div class="generate">
-        <h2 align="center">QR Code Generator</h2>
         <div class="generate-content">
+            <h2 align="center">QR Code Generator</h2>
             <center><img src="" id="img"></center>
             <select id="size">
                 <option value="100">100x100</option>
@@ -15,7 +15,7 @@
                 <option value="300">300x300</option>
             </select>
             <br/><br/>
-            <textarea placeholder="Enter Your Text" id="qrtext"></textarea>
+            <textarea placeholder="Enter Tracking Number" id="qrtext"></textarea>
             <br/><br/>
             <input type="submit" value="Generate" onclick="genQR()">
         </div>
