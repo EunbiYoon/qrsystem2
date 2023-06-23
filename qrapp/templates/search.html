@@ -18,7 +18,7 @@
             <tbody>
                 {% for item in item_list %}
                     <tr>
-                        <td>{{ item.data }}</td>
+                        <td>{{ item.code_data }}</td>
                         <td>{{ item.created_at|date:"d/m/y h:i a" }}</td>
                         <td>{{ item.receiver }}</td>
 
@@ -27,7 +27,7 @@
                         {% else %}
                             <td>
                                 {{ item.admin_check }} 
-                                <a href="{% url 'scan_url' %}">Scan</a>
+                                <a href="{% url 'checkout_url' %}">Scan</a>
                             </td>
                         {% endif %}
 
@@ -36,7 +36,7 @@
                         {% else %}
                             <td>
                                 {{ item.admin_check }} 
-                                <a href="{% url 'scan_url' %}">Scan</a>
+                                <a href="{% url 'checkout_url' %}">Scan</a>
                             </td>
                         {% endif %}
                     </tr>

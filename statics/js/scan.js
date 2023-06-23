@@ -11,18 +11,19 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 function success(result) {
+    /*change value*/
+    var input=document.getElementById("result");
+    input.value=result;
 
-    document.getElementById('scanned_data').innerHTML=result;
-    // document.getElementById('result').innerHTML = `
-    // <h2>Success!</h2>
-    // <p><a href="${result}">${result}</a></p>
-    // `;
+    /*change reader to success message*/
+    document.getElementById('reader').innerHTML = `
+    <h2>Success!</h2>
+    <p><a href="${result}">${result}</a></p>
+    `;
 
-    // scanner.clear();
-
-    document.getElementById('reader').remove();
-    // document.getElementById('scanned_data').value=result;
+    scanner.clear();
 }
-// function error(err){
-//     console.error(err);
-// }
+function error(err){
+    console.error(err);
+}
+

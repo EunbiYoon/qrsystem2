@@ -56,15 +56,15 @@ body{
     background-repeat: no-repeat;
     background-size:cover;
 }
-.container .foot{
+.foot{
     grid-row:5;
     color:white;
     background-color: coral;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top:2%;
-    padding-bottom:5%
+    padding:2%;
+    text-align: center;
 }
 
 /* index.html - text general settings*/
@@ -149,55 +149,68 @@ body{
     justify-content: center;
     align-items: center;
     height: 100%;
+    background-color: rgb(224, 224, 224);
     background-image:url('https://as1.ftcdn.net/v2/jpg/04/43/27/64/1000_F_443276418_f5KzpPzH8ksaGoRlTnio2AI0yhpo0rzL.jpg');
 }
-.scan-title{
+.scan-top{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 11fr 1fr 1fr;
 }
-.scan-title h1{
+.scan-top h1{
     grid-column: 1;
     font-size:3rem;
     font-weight: 800;
     color:blue;
     padding:1%;
-    display:flex;
-    text-align: left;
+    text-align:center;
 }
-.scan-title a{
+.scan-top .home_tag{
     grid-column: 2;
     text-align: right;
     font-size: 3rem;
 }
-.scan-main{
-    display:flex;
+.scan-top .search_tag{
+    grid-column: 3;
+    text-align: left;
+    padding-left:5%;
+    font-size: 3rem;
+}
+
+.scan-container{
+    background-color: rgb(192, 255, 193);
+    text-align: center;
+    font-size:2rem;
+    padding:2%
+}
+
+.scan-package{
+    display:grid;
     justify-content: center;
     align-items: center;
-    background-color:rgb(224, 224, 224);
-    font-size:2rem;
+    background-color:rgb(210, 161, 161);
 }
-.scan-main .scan-reader{
+.scan-package .reader{
     width: 600px;
     background-color: rgb(194, 255, 250);
     width: 100%;
 }
-.scan-main .scan-result{
+.scan-package .result{
     text-align: center;
 }
-.scan-main #reader__scan_region img{
+.scan-package #reader__scan_region img{
     width:200;
     height:200;
 }
-.scan-main .scan-reader img[alt="Info icon"]{
+.scan-package .scan-reader img[alt="Info icon"]{
     display: none;
 }
-.scan-main #html5-qrcode-button-camera-permission{
+.scan-package #html5-qrcode-button-camera-permission{
     background-color: skyblue;
     color:white;
     border:1px solid blue;
     border-radius: 10px;
 }
-.scan-main #html5-qrcode-anchor-scan-type-change{
+.scan-package #html5-qrcode-anchor-scan-type-change{
     margin-top:10%;
     /* background-color: skyblue; */
     color:blue;
@@ -205,13 +218,24 @@ body{
     border-radius: 10px;
     text-decoration: none;
 }
-
-.scan-main #html5-qrcode-button-file-selection{
+.scan-package #html5-qrcode-button-file-selection{
     background-color: skyblue;
     color:white;
     border:1px solid blue;
     border-radius: 10px;
 }
+.scan-receive{
+    background-color: beige;
+}
+.scan-submit{
+    background-color:cadetblue;
+    text-align: center;
+    font-size:2rem;
+}
+.scan-submit button{
+    background-color: #58208A;
+}
+
 
 /* add.html*/
 .generate{

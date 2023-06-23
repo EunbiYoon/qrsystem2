@@ -4,21 +4,29 @@
 
 {% block container %}
     <div class="scan">
-        <div class="scan-title">
+        <div class="scan-top">
             <h1>Scan Your Package</h1>
-            <a href="{% url 'home_url' %}">Home</a>
+            <a class="home_tag" href="{% url 'search_url' %}">Search</a>
+            <a class="search_tag" href="{% url 'home_url' %}">Home</a>
         </div>
-        <form method="post" action="{% url 'scan_url' %}">
-            {% csrf_token %}
-            <div class="scan-main">
-                <h1></h1>
-                <div name="reader" class="reader" id="reader"></div>
-                <input type="text" name="result" id="result"></div>
-                <input type="text" name="receiver" id="receiver" placeholder="Type the receiver">
-                <button id="submit" type="submit">Save</button>
-                <!-- <div class="scan-result" class="result" id="result"></div> -->
-            </div>
-        </form>
+        <div class="scan-container">
+            <form method="post" action="{% url 'scan_url' %}">
+                {% csrf_token %}
+                <div class="scan-package">
+                    <h1>Tracking Number</h1>
+                    <div name="reader" class="reader" id="reader"></div>
+                    <input type="text" class="result" name="result" id="result" placeholder="Scan or Type Manually">
+                </div>
+                <div class="scan-receive">
+                    <h1>Package Receiver</h1>
+                    <input type="text" name="receiver" id="receiver" placeholder="Type the receiver">
+                </div>
+                <div class="scan-submit">
+                    <h1>Click Save!</h1>
+                    <button id="submit" type="submit">Save</button>
+                </div>
+            </form>
+        </div>
     </div>
 
     {% load static %}
