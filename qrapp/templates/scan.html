@@ -4,11 +4,6 @@
 
 {% block container %}
     <div class="scan">
-        <div class="scan-top">
-            <h1>Scan Your Package</h1>
-            <a class="home_tag" href="{% url 'search_url' %}">Search</a>
-            <a class="search_tag" href="{% url 'home_url' %}">Home</a>
-        </div>
         <div class="scan-container">
             <form method="post" action="{% url 'scan_url' %}">
                 {% csrf_token %}
