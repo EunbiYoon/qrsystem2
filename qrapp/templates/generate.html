@@ -3,23 +3,24 @@
 {% block title %}Shipping Center{% endblock %}
 
 {% block container %}
-    {% load static %}
-    <script src="{% static 'js/generate.js' %}"></script>
-        <div class="generate">
-            <h2 align="center">QR Code Generator</h2>
-            <div class="generate-content">
-                <center><img src="" id="img"></center>
-                <select id="size">
-                    <option value="100">100x100</option>
-                    <option value="150">150x150</option>
-                    <option value="200">200x200</option>
-                    <option value="250" selected>250x250</option>
-                    <option value="300">300x300</option>
-                </select>
-                <br/><br/>
-                <textarea placeholder="Enter Your Text" id="qrtext"></textarea>
-                <br/><br/>
-                <input type="submit" value="Generate" onclick="genQR()">
-            </div>
+    <div class="generate">
+        <h2 align="center">QR Code Generator</h2>
+        <div class="generate-content">
+            <center><img src="" id="img"></center>
+            <select id="size">
+                <option value="100">100x100</option>
+                <option value="150">150x150</option>
+                <option value="200">200x200</option>
+                <option value="250" selected>250x250</option>
+                <option value="300">300x300</option>
+            </select>
+            <br/><br/>
+            <textarea placeholder="Enter Your Text" id="qrtext"></textarea>
+            <br/><br/>
+            <input type="submit" value="Generate" onclick="genQR()">
         </div>
+    </div>
+    {% load static %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static 'js/generate.js' %}"></script>
 {% endblock %}

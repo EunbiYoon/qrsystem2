@@ -4,26 +4,24 @@
 
 {% block container %}
     <div class="home-container">
-        <div class="info">
+        <div class="home-info">
             <h1 class="main">LGEUS TN Delivery Center</h1>
-            <img src="https://img.icons8.com/cotton/64/cardboard-box--v1.png" alt="cardboard-box--v1"/>
+            <!-- <img src="https://img.icons8.com/cotton/64/cardboard-box--v1.png" alt="cardboard-box--v1"/> -->
+            <img src="https://t4.ftcdn.net/jpg/03/65/36/53/240_F_365365352_9E1EP9oRz5QytXx4OK2O36tLZmQTkaPk.jpg"/>
             <h2>Check your package shipping status in here!</h2>
             <h3>Link With LGEUS TN Factory Security</h3>
         </div>
-        <div class="search">
-            <a href="{% url 'search_url'%}">
-                <h1 class="menu">Search Package</h1>
-            </a>
-        </div>
-        <div class="scan">
-            <a href="{% url 'scan_url'%}">
-                <h1 class="menu">Check Out</h1>
-            </a>
-        </div>
-        <div class="add">
-            <a href="{% url 'add_url'%}">
-                <h1 class="menu">Add New</h1>
-            </a>
-        </div>
+        <a class="home-search" href="{% url 'search_url'%}">
+            <h1 class="menu">Search Package</h1>
+            <img src="https://t4.ftcdn.net/jpg/02/21/22/63/240_F_221226305_9Gij9LQt2ooEM712qQ9TDwpkXMvfqdwp.jpg"/>
+        </a>
+        <a class="home-scan" href="{% url 'scan_url'%}">
+            <h1 class="menu">Checkout</h1>
+            <img src="https://t4.ftcdn.net/jpg/02/68/61/11/240_F_268611102_4omJUfdGvvZ4xMLLn92RlA6xz4A8g4Xb.jpg"/>
+        </a>
+        <a class="home-add" href="{% url 'add_url'%}">
+            <h1 class="menu">Add New</h1>
+            <img src='https://t3.ftcdn.net/jpg/02/15/13/02/240_F_215130263_GyMwGP6LbToxkuVNEsy1KTv2ScfEJWoQ.jpg'/>
+        </a>
     </div>
 {% endblock %}
