@@ -2,7 +2,8 @@
 body{
     font-family:'Nexa', sans-serif;
     width: 50%;
-    margin: auto !important;
+    margin: 0 auto !important;
+    background-color:gainsboro !important;
 }
 .base-wrapper{
     position: relative;
@@ -37,6 +38,7 @@ body{
     color:coral;
     background-color: antiquewhite;
     text-align: center;
+    margin:0;
 }
 
 /* home.html - grid details */
