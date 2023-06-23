@@ -40,6 +40,9 @@ body{
     padding:1%;
     margin:auto;
 }
+.base-foot a{
+    color:rgb(185, 151, 107);
+}
 
 /* home.html - grid details */
 .home-container{
@@ -95,7 +98,7 @@ body{
     padding-bottom:55px;
 }
 .home-add{
-    background-color:rgb(215, 211, 162);
+    background-color:rgb(201, 187, 167);
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -19,6 +19,7 @@
                     <div class="msg"><h4>Hello, {{user.username}}</h4></div>
                     <div class="lik">
                         <a href="{% url 'logout_url' %}"><h4>Logout</h4></a>
+                        {% block home %}{% endblock %}
                     </div>
                 {% else %}
                     <div class="msg"><h4>Login Here</h4></div>
@@ -33,7 +34,10 @@
             {% endblock %}
         </div>
         <div class="base-foot">
-            <h4>Powered By LGEUS TN R&D Eunbi Yoon</h4>
+            <h5> 
+                Powered By LGEUS TN R&D Department Eunbi Yoon
+                <a href = "mailto: eunbi1.yoon@lge.com">eunbi1.yoon@lge.com</a>
+            </h5>
         </div>
     </div>
 </body>
