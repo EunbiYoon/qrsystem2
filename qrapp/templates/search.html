@@ -19,7 +19,7 @@
                 {% for item in item_list %}
                     <tr>
                         <td>{{ item.code_data }}</td>
-                        <td>{{ item.created_at|date:"d/m/y h:i a" }}</td>
+                        <td>{{ item.created_at|date:"m/d/y h:i a" }}</td>
                         <td>{{ item.receiver }}</td>
 
                         {% if item.check_out %}
