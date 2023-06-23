@@ -170,19 +170,14 @@ body{
 .search-detail {
     width:90%;
     margin:3% auto;
+    padding:2% 0;
 }
 .search-detail input{
     margin-bottom:1%;
-    border:1px solid pink;
+    border:3px solid pink;
     font-size:2rem;
     color:rgb(255, 115, 138);
     background-color:antiquewhite;
-}
-.search-detail input:focus{
-    border-color:blue;
-}
-.search-detail input:blank{
-    border-color:purple;
 }
 .search-detail table, .search-detail tr, .search-detail th, .search-detail td{
     border:1px solid pink;
