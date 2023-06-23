@@ -11,9 +11,11 @@
         <form method="post" action="{% url 'scan_url' %}">
             {% csrf_token %}
             <div class="scan-main">
-                <div name="reader" class="reader" id="reader" readonly></div>
-                <input type="text" name="scanned_data" id="scanned_data" readonly>
-                <button type="submit">Save</button>
+                <h1></h1>
+                <div name="reader" class="reader" id="reader"></div>
+                <input type="text" name="result" id="result"></div>
+                <input type="text" name="receiver" id="receiver" placeholder="Type the receiver">
+                <button id="submit" type="submit">Save</button>
                 <!-- <div class="scan-result" class="result" id="result"></div> -->
             </div>
         </form>
