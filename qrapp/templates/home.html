@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Shipping Center{% endblock %}
+
+{% block container %}
+    <div class="home-container">
+        <div class="info">
+            <h1 class="main">LGEUS TN Delivery Center</h1>
+            <img src="https://img.icons8.com/cotton/64/cardboard-box--v1.png" alt="cardboard-box--v1"/>
+            <h2>Check your package shipping status in here!</h2>
+            <h3>Link With LGEUS TN Factory Security</h3>
+        </div>
+        <div class="search">
+            <a href="{% url 'search_url'%}">
+                <h1 class="menu">Search Package</h1>
+            </a>
+        </div>
+        <div class="scan">
+            <a href="{% url 'scan_url'%}">
+                <h1 class="menu">Check Out</h1>
+            </a>
+        </div>
+        <div class="add">
+            <a href="{% url 'add_url'%}">
+                <h1 class="menu">Add New</h1>
+            </a>
+        </div>
+    </div>
+{% endblock %}

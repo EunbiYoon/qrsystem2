@@ -11,7 +11,7 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 class homeView(TemplateView):
-    template_name='index.html'
+    template_name='home.html'
 
 @login_required
 def searchView(request):
@@ -34,10 +34,6 @@ def scanView(request):
     return render(request,'scan.html')
 
 @login_required
-def genView(request):
-    return render(request,'add.html')
-
-@login_required
 def checkoutView(request):
     if request.method=='POST':
         scan_track=request.POST.get('result')
@@ -53,3 +49,7 @@ def checkoutView(request):
 @login_required
 def successView(request):
     return render(request,'success.html')
+
+@login_required
+def genView(request):
+    return render(request,'generate.html')
