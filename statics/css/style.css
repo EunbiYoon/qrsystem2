@@ -11,7 +11,7 @@ body{
 }
 .base-top{
     color:white;
-    background-color: #ef8058;
+    background-color:#ef8058;
     display: grid;
     grid-template-columns: 2fr 3fr 1fr;
     padding:1%;
