@@ -272,9 +272,8 @@ body{
     padding:1%;
     text-align: center;
 }
-.checkout-package span:hover{
+.checkout-package .html5-qrcode-element:hover{
     background-color:rgb(107, 87, 60);
-    color:white;
 }
 .checkout-package .result{
     color:coral;
@@ -397,9 +396,8 @@ body{
     padding:1%;
     text-align: center;
 }
-.scan-track span:hover{
+.scan-track .html5-qrcode-element:hover{
     background-color:rgb(107, 87, 60);
-    color:white;
 }
 .scan-track input{
     background-color:antiquewhite;
