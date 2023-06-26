@@ -52,18 +52,29 @@ def addscanView(request):
     if request.method=='POST':
         scan_track=request.POST.get('result')
         scan_receiver=request.POST.get('receiver')
+
+        #if each colum empty
+        if not scan_track:
+            context={
+                "message":"Tracking Number is empty!"
+            }
+        elif not scan_receiver:
+            context={
+                "message":"Receiever is empty!"
+            }
         #compare existed query
-        entry_exists=QRCodeData.objects.filter(code_data=scan_track).exists()
-        if entry_exists:
-            context={
-                "message":"scanning result already exists!"
-            }
         else:
-            qr_code_scan=QRCodeData(receiver=scan_receiver, code_data=scan_track)
-            qr_code_scan.save()
-            context={
-                "message":"add scanning successfully!"
-            }
+            entry_exists=QRCodeData.objects.filter(code_data=scan_track).exists()
+            if entry_exists:
+                context={
+                    "message":"scanning result already exists!"
+                }
+            else:
+                qr_code_scan=QRCodeData(receiver=scan_receiver, code_data=scan_track)
+                qr_code_scan.save()
+                context={
+                    "message":"add scanning successfully!"
+                }
         return render(request,'message.html', context=context)
     return render(request,'add_scan.html')
 

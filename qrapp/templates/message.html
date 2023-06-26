@@ -4,4 +4,6 @@
 
 {% block container %}
     <h1>{{message}}</h1>
+    <button onclick="history.back()">Go Back</button>
+    <a href="{% url 'home_url' %}">Home</a>
 {% endblock %}
