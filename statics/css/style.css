@@ -303,7 +303,7 @@ body{
     display: none;
 }
 .checkout-package .html5-qrcode-element{
-    background-color:coral;
+    background-color:#ef8058;
     color:white;
     border-radius: 10px;
     font-size:1.5rem;
@@ -376,6 +376,7 @@ body{
     cursor: pointer;
 }
 
+
 /* add_scan.html */
 .scan{
     justify-content: center;
@@ -430,7 +431,7 @@ body{
     display: none;
 }
 .scan-track .html5-qrcode-element{
-    background-color:coral;
+    background-color:#ef8058;
     color:white;
     border-radius: 10px;
     font-size:1.5rem;
