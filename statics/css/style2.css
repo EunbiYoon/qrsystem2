@@ -32,7 +32,7 @@ body{
     border-left:2px solid antiquewhite;
 }
 .base-top a:hover{
-    color:rgb(107, 87, 60);;
+    color:rgb(107, 23, 23);
 }
 .base-top .base-login{
     border: 2px solid antiquewhite;
@@ -52,7 +52,7 @@ body{
     color:antiquewhite;
 }
 .base-top .base-login .lik a:hover{   
-    color:navy;
+    color:rgb(107, 23, 23);
 }
 .base-container{
     background-color: whitesmoke;
@@ -344,16 +344,17 @@ body{
 .add{
     text-align: center;
     padding:5%;
+    background-color:rgb(222, 242, 189);
 }
 .add h1{
-    color:#766e66;
-    font-weight: 600;
+    color:rgb(87, 97, 74);
+    font-weight: 700;
     margin-bottom:2%
 }
 .add .add-menu{
-    border:3px dashed #AFA498;
+    border:3px dashed rgb(122, 142, 91);
     width: 50%;
-    margin: auto auto 3% auto;
+    margin: auto auto 5% auto;
     background-color: rgb(255, 253, 240);
 }
 .add .add-menu a{
@@ -369,7 +370,7 @@ body{
     font-weight: 600;
 }
 .add .add-menu a h3:hover{
-    background-color:#AFA498;
+    background-color:rgb(87, 97, 74);
     color:white;
     cursor: pointer;
 }
@@ -542,4 +543,21 @@ body{
 }
 
 /* message.html */
-.message 
+.message{
+    text-align: center;
+    margin:3%;
+    padding:10%;
+}
+.message .info{
+    color:navy;   
+    text-transform: inherit;
+}
+.message .back{
+    background-color: aliceblue;
+}
+.message .result{
+    background-color: beige;
+}
+.message .home{
+    background-color: greenyellow;
+}

@@ -1,12 +1,12 @@
-{% extends 'base.html' %}
+ {% extends 'base.html' %}
 
 {% block title %}Message{% endblock %}
 
 {% block container %}
     <div class="message">
-        <h1>{{message}}</h1>
-        <button onclick="history.back()">Go Back</button>
-        <a href="{% url 'search_url' %}">Check Result</a>
-        <a href="{% url 'home_url' %}">Home</a>
+        <h1 class="info">{{message}}</h1>
+        <button class="back" onclick="history.back()">Go Back</button>
+        <a class="result" href="{% url 'search_url' %}">Check Result</a>
+        <a class="home" href="{% url 'home_url' %}">Home</a>
     </div>
 {% endblock %}

@@ -94,3 +94,8 @@ def addscanView(request):
 @login_required
 def addgenView(request):
     return render(request,'add_generate.html')
+
+@login_required
+def messageView(request):
+    context={"message":"This is default message"}
+    return render(request,'message.html', context=context)
