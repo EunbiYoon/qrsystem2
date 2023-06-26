@@ -352,6 +352,9 @@ body{
     border-radius: 10px;
     padding:6%;
 }
+.scan-package h1{
+    color:coral;
+}
 
 .scan-track{
     display:grid;
@@ -363,9 +366,6 @@ body{
     border-right:1px #CDC8C2 solid;
     color:rgb(107, 87, 60);
     font-weight: 600;
-}
-.scan-package h1{
-    color:coral;
 }
 .scan-track .reader{
     background-color:antiquewhite;
@@ -401,29 +401,22 @@ body{
     background-color:rgb(107, 87, 60);
     color:white;
 }
-.scan-track .result{
-    color:coral;
-    font-weight:600;
-    background-color: antiquewhite;
-    border:1px solid #CDC8C2;
-}
 .scan-track input{
+    background-color:antiquewhite;
+    border-radius: 10px;
+    text-align: center;
     color:coral;
     font-weight:600;
+    border:1px solid #CDC8C2;
 }
 .scan-track input::placeholder{
     color:rgba(107, 87, 60, 0.446);
     font-weight:600;
 }
 
+
 .scan-receiver{
     margin-top:3%;
-}
-.scan-receiver input{
-    background-color:antiquewhite;
-    color:coral;
-    border-radius: 10px;
-    text-align: center;
 }
 
 
