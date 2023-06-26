@@ -370,13 +370,15 @@ body{
     text-align: center;
     padding:5%;
 }
-.add h3{
-    color:grey;
+.add h2{
+    color:#766e66;
+    font-weight: 800;
+    margin-bottom:2%
 }
 .add .add-menu{
-    border:3px dashed coral;
+    border:3px dashed #AFA498;
     width: 50%;
-    margin: auto;
+    margin: auto auto 3% auto;
     background-color: rgb(255, 253, 240);
 }
 .add .add-menu a{
@@ -389,9 +391,10 @@ body{
     margin:auto;
     width: 90%;
     padding:2%;
+    font-weight: 800;
 }
 .add .add-menu a h4:hover{
-    background-color:grey;
+    background-color:#AFA498;
     color:white;
     cursor: pointer;
 }
