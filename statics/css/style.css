@@ -366,6 +366,39 @@ body{
 }
 
 /* add.html*/
+.add{
+    text-align: center;
+    padding:5%;
+}
+.add h3{
+    color:grey;
+}
+.add .add-menu{
+    border:3px dashed coral;
+    width: 50%;
+    margin: auto;
+    background-color: rgb(255, 253, 240);
+}
+.add .add-menu a{
+    text-decoration: none;
+    margin:3%;
+    color:coral;
+}
+.add .add-menu a h4{
+    background-color:rgb(249, 226, 196);
+    margin:auto;
+    width: 90%;
+    padding:2%;
+}
+.add .add-menu a h4:hover{
+    background-color:grey;
+    color:white;
+    cursor: pointer;
+}
+
+
+
+/* generate.html*/
 .generate{
     background-color:white;
     font-size:2rem;

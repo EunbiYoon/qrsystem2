@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Shipping Center{% endblock %}
+
+{% block container %}
+    <div class="add">
+        <h3>Choose Menu</h3>
+        <div class="add-menu">
+            <a class="add-scan" href="{% url 'scan_url' %}"><h4>Scan QR or Barcode</h4></a>
+            <a class="add-gen" href="{% url 'gen_url' %}"><h4>Generate QR code</h4></a>
+        </div>
+    </div>
+{% endblock %}

@@ -51,5 +51,9 @@ def successView(request):
     return render(request,'success.html')
 
 @login_required
+def addView(request):
+    return render(request,'add.html')
+
+@login_required
 def genView(request):
     return render(request,'generate.html')
