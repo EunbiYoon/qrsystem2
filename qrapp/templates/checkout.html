@@ -10,7 +10,7 @@
                 <div class="checkout-package">
                     <h1>Tracking Number</h1>
                     <div name="reader" class="reader" id="reader"></div>
-                    <div class="choose">or</div>
+                    <div id="choose" class="choose">or</div>
                     <input type="text" class="result" name="result" id="result" placeholder="Enter manually here">
                     <button id="submit" type="submit">Save</button>
                 </div>
@@ -19,6 +19,6 @@
     </div>
     {% load static %}
     <script src="{% static 'js/html5-qrcode.min.js' %}"></script>
-    <script src="{% static 'js/checkout.js' %}"></script>
+    <script src="{% static 'js/checkout3.js' %}"></script>
 
 {% endblock %}

@@ -16,10 +16,8 @@ function success(result) {
     input.value=result;
 
     /*change reader to success message*/
-    document.getElementById('reader').innerHTML = `
-    <h2>Success!</h2>
-    <p><a href="${result}">${result}</a></p>
-    `;
+    document.getElementById('reader').innerHTML = ``;
+    document.getElementById('choose').innerHTML = `<h4>Scan Result</h4>`;
 
     scanner.clear();
 }

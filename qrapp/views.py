@@ -28,13 +28,26 @@ def searchView(request):
 def checkoutView(request):
     if request.method=='POST':
         scan_track=request.POST.get('result')
+        user_authority=request.user
+        #check code_data exist
         try:
             entry=QRCodeData.objects.get(code_data=scan_track)
-            entry.check_out=True
-            entry.save()
-            context={
-                "message":"checkout successfully!"
-            }
+            if user_authority.is_superuser:
+                entry.admin_check=True
+                entry.save()
+                context={
+                    "message":"admin checkout successfully!"
+                }
+            elif user_authority.is_staff:
+                entry.check_out=True
+                entry.save()
+                context={
+                    "message":"receiver checkout successfully!"
+                }
+            else:
+                context={
+                    "message":"Error"
+                }
             return render(request,'message.html', context=context)
         except QRCodeData.DoesNotExist:
             context={

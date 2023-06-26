@@ -3,7 +3,10 @@
 {% block title %}Message{% endblock %}
 
 {% block container %}
-    <h1>{{message}}</h1>
-    <button onclick="history.back()">Go Back</button>
-    <a href="{% url 'home_url' %}">Home</a>
+    <div class="message">
+        <h1>{{message}}</h1>
+        <button onclick="history.back()">Go Back</button>
+        <a href="{% url 'search_url' %}">Check Result</a>
+        <a href="{% url 'home_url' %}">Home</a>
+    </div>
 {% endblock %}
