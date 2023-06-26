@@ -11,7 +11,7 @@ body{
 }
 .base-top{
     color:white;
-    background-color: coral;
+    background-color: #ef8058;
     display: grid;
     grid-template-columns: 2fr 3fr 1fr;
     padding:1%;
@@ -129,13 +129,13 @@ body{
     color:white;
 }
 .home-search:hover{
-    background-color: coral;
+    background-color: #ef8058;
 }
 .home-checkout:hover{
-    background-color:coral;
+    background-color:#ef8058;
 }
 .home-add:hover{
-    background-color: coral;
+    background-color: #ef8058;
 }
 .home-info{
     background-color:transparent;
@@ -548,6 +548,9 @@ body{
     text-align: center;
     margin:3%;
     padding:10%;
+}
+.message img{
+    width: 20%;
 }
 .message .info{
     color:navy;   

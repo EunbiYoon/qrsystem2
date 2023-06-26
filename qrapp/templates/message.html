@@ -4,6 +4,8 @@
 
 {% block container %}
     <div class="message">
+        {% load static %}
+        <img src="../../statics/icon/success.png">
         <h1 class="info">{{message}}</h1>
         <button class="back" onclick="history.back()">Go Back</button>
         <a class="result" href="{% url 'search_url' %}">Check Result</a>
