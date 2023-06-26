@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import homeView,searchView,scanView,addView,successView, checkoutView, genView
+from .views import homeView,searchView,addscanView,addView,successView, checkoutView, addgenView
 
 urlpatterns = [
     path('',homeView.as_view(),name='home_url'),
@@ -7,6 +7,6 @@ urlpatterns = [
     path('checkout',checkoutView,name="checkout_url"),
     path('success',successView,name='success_url'),
     path('add',addView,name='add_url'),
-    path('add/generate',genView,name='gen_url'),
-    path('add/scan',scanView,name='scan_url'),
+    path('add/generate',addgenView,name='addgen_url'),
+    path('add/scan',addscanView,name='addscan_url'),
 ]

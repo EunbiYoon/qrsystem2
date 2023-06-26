@@ -52,19 +52,25 @@ def addView(request):
     return render(request,'add.html')
 
 @login_required
-def scanView(request):
+def addscanView(request):
     if request.method=='POST':
         scan_track=request.POST.get('result')
         scan_receiver=request.POST.get('receiver')
-        qr_code_scan=QRCodeData(receiver=scan_receiver, code_data=scan_track)
-        qr_code_scan.save()
-        context={
-            "message":"add scanning successfully!"
-        }
+        #compare existed query
+        entry_exists=QRCodeData.objects.filter(code_data=scan_track).exists()
+        if entry_exists:
+            context={
+                "message":"scanning result already exists!"
+            }
+        else:
+            qr_code_scan=QRCodeData(receiver=scan_receiver, code_data=scan_track)
+            qr_code_scan.save()
+            context={
+                "message":"add scanning successfully!"
+            }
         return render(request,'message.html', context=context)
     return render(request,'add_scan.html')
 
-
 @login_required
-def genView(request):
+def addgenView(request):
     return render(request,'add_generate.html')

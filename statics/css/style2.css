@@ -436,6 +436,9 @@ body{
     background-color:rgb(107, 87, 60);
     color:white;
 }
+.scan .element.style{
+    border:1px solid black;
+}
 
 
 /* generate.html*/
