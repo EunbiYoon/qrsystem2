@@ -9,9 +9,10 @@
                 {% csrf_token %}
                 <div class="checkout-package">
                     <h1>Tracking Number</h1>
+                    <h5>Scan QR Code or Enter Manually</h5>
                     <div name="reader" class="reader" id="reader"></div>
                     <div id="choose" class="choose">or</div>
-                    <input type="text" class="result" name="result" id="result" placeholder="Enter manually here">
+                    <input type="text" class="result" name="result" id="result" placeholder="1234 5678 9123">
                     <button id="submit" type="submit">Save</button>
                 </div>
             </form>

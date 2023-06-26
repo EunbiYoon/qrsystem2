@@ -280,17 +280,17 @@ body{
 .checkout-package h1{
     color:coral;
 }
+.checkout-package h5{
+    color:rgb(107, 87, 60);
+    font-weight:600;
+}
 .checkout-package .reader{
     width: 600px;
     background-color:antiquewhite;
     width: 100%;
     border-radius: 15px 15px 0 0;
 }
-.checkout-package .reader::before{
-    content:"Scan QR or Barcode";
-    color:rgb(107, 87, 60);
-    font-weight:600;
-}
+
 .checkout-package .result{
     text-align: center;
     border-radius: 0 0 15px 15px;
@@ -315,7 +315,7 @@ body{
 .checkout-package .html5-qrcode-element:hover{
     background-color:rgb(107, 87, 60);
 }
-.checkout-package .result{
+.checkout-package input{
     color:coral;
     font-weight:600;
     background-color: antiquewhite;
@@ -325,10 +325,6 @@ body{
     color:rgba(107, 87, 60, 0.446);
     font-weight:600;
 }
-.checkout-package button:hover{
-    background-color:rgb(107, 87, 60);
-    color:white;
-}
 .checkout-package button{
     background-color:rgb(222, 242, 189);
     color:coral;
@@ -336,6 +332,11 @@ body{
     border-radius: 10px;
     font-size: 2rem;
     margin:1%;
+    font-weight: 600;
+}
+.checkout-package button:hover{
+    background-color:rgb(107, 87, 60);
+    color:white;
 }
 
 /* add.html*/
@@ -460,6 +461,7 @@ body{
 
 .scan-submit{
     margin-top:5%;
+    margin-bottom:8%;
 }
 .scan-submit button{
     background-color:rgb(222, 242, 189);
@@ -468,6 +470,7 @@ body{
     border-radius: 10px;
     font-size: 2rem;
     width: 100%;
+    font-weight: 600;
 }
 .scan-submit button:hover{
     background-color:rgb(107, 87, 60);
