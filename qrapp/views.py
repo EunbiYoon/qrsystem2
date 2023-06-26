@@ -44,10 +44,6 @@ def checkoutView(request):
     return render(request,'checkout.html')
 
 @login_required
-def successView(request):
-    return render(request,'success.html')
-
-@login_required
 def addView(request):
     return render(request,'add.html')
 
