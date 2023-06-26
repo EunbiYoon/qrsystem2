@@ -51,7 +51,7 @@ def checkoutView(request):
             return render(request,'message.html', context=context)
         except QRCodeData.DoesNotExist:
             context={
-                "message":"checkout failed!"
+                "message":"Tracking Number Not Exists"
             }
             return render(request,'message.html', context=context)
     return render(request,'checkout.html')

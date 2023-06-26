@@ -394,6 +394,11 @@ body{
 .scan-package h1{
     color:coral;
 }
+.scan-track h5{
+    content:"Scan QR or Barcode";
+    color:rgb(107, 87, 60);
+    font-weight:600;
+}
 
 .scan-track{
     display:grid;
@@ -409,11 +414,6 @@ body{
 .scan-track .reader{
     background-color:antiquewhite;
     border-radius: 15px 15px 0 0;
-}
-.scan-track .reader::before{
-    content:"Scan QR or Barcode";
-    color:rgb(107, 87, 60);
-    font-weight:600;
 }
 .scan-track .result{
     text-align: center;
