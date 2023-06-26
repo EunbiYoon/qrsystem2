@@ -242,7 +242,8 @@ body{
     text-decoration: none;
 }
 .search-detail a:hover{
-    background-color:navy;
+    background-color:coral;
+    border: 1px solid red;
     color:white;
     font-weight:600;
 }
@@ -336,7 +337,7 @@ body{
     font-weight: 600;
 }
 .checkout-package button:hover{
-    background-color:rgb(107, 87, 60);
+    background-color:rgb(87, 97, 74);
     color:white;
 }
 
@@ -476,7 +477,7 @@ body{
     font-weight: 600;
 }
 .scan-submit button:hover{
-    background-color:rgb(107, 87, 60);
+    background-color:rgb(87, 97, 74);
     color:white;
 }
 .scan .element.style{
