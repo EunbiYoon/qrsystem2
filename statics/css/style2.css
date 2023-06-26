@@ -41,6 +41,7 @@ body{
 }
 .base-top .base-login .msg{
     grid-row:1;
+    text-transform: capitalize;
 }
 .base-top .base-login .lik{
     grid-row:2;
