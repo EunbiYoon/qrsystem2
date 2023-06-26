@@ -206,73 +206,6 @@ body{
     font-weight:600;
 }
 
-/* scan.html */
-.scan{
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-color: rgb(224, 224, 224);
-    background-image:url('https://as1.ftcdn.net/v2/jpg/04/43/27/64/1000_F_443276418_f5KzpPzH8ksaGoRlTnio2AI0yhpo0rzL.jpg');
-}
-.scan-container{
-    background-color:rgb(222, 242, 189);
-    text-align: center;
-    font-size:2rem;
-    padding:2%
-}
-
-.scan-package{
-    display:grid;
-    justify-content: center;
-    align-items: center;
-    background-color:rgb(210, 161, 161);
-}
-.scan-package .reader{
-    width: 600px;
-    background-color: rgb(194, 255, 250);
-    width: 100%;
-}
-.scan-package .result{
-    text-align: center;
-}
-.scan-package #reader__scan_region img{
-    width:200;
-    height:200;
-}
-.scan-package .scan-reader img[alt="Info icon"]{
-    display: none;
-}
-.scan-package #html5-qrcode-button-camera-permission{
-    background-color: skyblue;
-    color:white;
-    border:1px solid blue;
-    border-radius: 10px;
-}
-.scan-package #html5-qrcode-anchor-scan-type-change{
-    margin-top:10%;
-    /* background-color: skyblue; */
-    color:blue;
-    /* border:1px solid blue; */
-    border-radius: 10px;
-    text-decoration: none;
-}
-.scan-package #html5-qrcode-button-file-selection{
-    background-color: skyblue;
-    color:white;
-    border:1px solid blue;
-    border-radius: 10px;
-}
-.scan-receive{
-    background-color: beige;
-}
-.scan-submit{
-    background-color:cadetblue;
-    text-align: center;
-    font-size:2rem;
-}
-.scan-submit button{
-    background-color: #58208A;
-}
 
 /* checkout.html */
 .checkout{
@@ -370,9 +303,9 @@ body{
     text-align: center;
     padding:5%;
 }
-.add h2{
+.add h1{
     color:#766e66;
-    font-weight: 800;
+    font-weight: 600;
     margin-bottom:2%
 }
 .add .add-menu{
@@ -386,19 +319,123 @@ body{
     margin:3%;
     color:coral;
 }
-.add .add-menu a h4{
+.add .add-menu a h3{
     background-color:rgb(249, 226, 196);
     margin:auto;
     width: 90%;
     padding:2%;
-    font-weight: 800;
+    font-weight: 600;
 }
-.add .add-menu a h4:hover{
+.add .add-menu a h3:hover{
     background-color:#AFA498;
     color:white;
     cursor: pointer;
 }
 
+/* scan.html */
+.scan{
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgb(224, 224, 224);
+    background-image:url('https://as1.ftcdn.net/v2/jpg/04/43/27/64/1000_F_443276418_f5KzpPzH8ksaGoRlTnio2AI0yhpo0rzL.jpg');
+}
+.scan-container{
+    background-color: rgb(222, 242, 189);
+    text-align: center;
+    font-size:2rem;
+    padding:2%;
+}
+.scan-package{
+    background-color:white;
+    border-radius: 10px;
+    padding:6%;
+}
+.scan-track{
+    display:grid;
+    justify-content: center;
+    align-items: center; 
+}
+.scan-track .choose{
+    border-left:1px #CDC8C2 solid;
+    border-right:1px #CDC8C2 solid;
+    color:rgb(107, 87, 60);
+    font-weight: 600;
+}
+.scan-track h1{
+    color:coral;
+}
+.scan-track .reader{
+    width: 600px;
+    background-color:antiquewhite;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+.scan-track .reader::before{
+    content:"Scan QR or Barcode";
+    color:rgb(107, 87, 60);
+    font-weight:600;
+}
+.scan-track .result{
+    text-align: center;
+    border-radius: 0 0 15px 15px;
+}
+.scan-track #reader__scan_region{
+    display: none;
+}
+.scan-track img[alt="Info icon"]{
+    display: none;
+}
+.scan-track .html5-qrcode-element{
+    background-color:coral;
+    color:white;
+    border-radius: 10px;
+    font-size:1.5rem;
+    width: 90%;
+    text-decoration: none !important;
+    border:none;
+    padding:1%;
+    text-align: center;
+}
+.scan-track span:hover{
+    background-color:rgb(107, 87, 60);
+    color:white;
+}
+.scan-track .result{
+    color:coral;
+    font-weight:600;
+    background-color: antiquewhite;
+    border:1px solid #CDC8C2;
+}
+.scan-track input::placeholder{
+    color:rgb(107, 87, 60);
+    font-weight:600;
+}
+
+.scan-receiver h1{
+    color:coral;
+}
+.scan-receiver input{
+    background-color:antiquewhite;
+    color:rgb(107, 87, 60);
+    border-radius: 10px;
+}
+.scan-receiver input::placeholder{
+    color:rgb(107, 87, 60);
+    font-weight:600;
+}
+.scan-submit button{
+    background-color:rgb(222, 242, 189);
+    color:coral;
+    border:1px solid #CDC8C2;
+    border-radius: 10px;
+    font-size: 2rem;
+    margin:1%;
+}
+.scan-submit button:hover{
+    background-color:rgb(107, 87, 60);
+    color:white;
+}
 
 
 /* generate.html*/

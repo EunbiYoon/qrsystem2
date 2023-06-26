@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Scan Package{% endblock %}
+
+{% block container %}
+    <div class="scan">
+        <div class="scan-container">
+            <form method="post" action="{% url 'scan_url' %}">
+                {% csrf_token %}
+                <div class="scan-package">
+                    <div class="scan-track">
+                        <h1>Tracking Number</h1>
+                        <div name="reader" class="reader" id="reader"></div>
+                        <div class="choose">or</div>
+                        <input type="text" class="result" name="result" id="result" placeholder="Enter manually here">
+                    </div>
+                    <div class="scan-receiver">
+                        <h1>Package Receiver</h1>
+                        <input type="text" name="receiver" id="receiver" placeholder="Enter the receiver">
+                    </div>
+                    <div class="scan-submit">
+                        <button id="submit" type="submit">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {% load static %}
+    <script src="{% static 'js/html5-qrcode.min.js' %}"></script>
+    <script src="{% static 'js/scan.js' %}"></script>
+
+{% endblock %}
+</div>
