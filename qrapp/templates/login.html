@@ -37,7 +37,7 @@
             {% endfor %}
             <!-- <p clas="alert alert-warning">Sign Up</p> -->
             <form action="{% url 'register_url' %}" method="POST">
-                <h4>All blank required, Password at least 8 digits</h4>
+                <h5>All blank required, Password at least 8 digits</h5>
                 {% csrf_token %}
                 <div class="register-column">
                     <label for="form-label" class="form-label">First Name</label>

@@ -69,6 +69,26 @@ body{
     color:rgb(185, 151, 107);
 }
 /*login.html*/
+.register-login{
+    margin:2% auto;
+    padding:3%;
+    background-color: aliceblue;
+}
+.register-login .login{
+    width: 50%;
+    margin:auto;
+}
+.register-login .register{
+    margin-top:2%;
+    width: 50%;
+    margin:auto;
+}
+.register-login .register h5{
+    font-weight: 400;
+    text-transform:inherit;
+    font-size: 1rem;
+    color:rgb(94, 171, 239);
+}
 
 /* home.html - grid details */
 .home-container{
