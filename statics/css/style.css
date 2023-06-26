@@ -68,18 +68,36 @@ body{
 .base-foot a{
     color:rgb(185, 151, 107);
 }
+
+
 /*login.html*/
 .register-login{
     margin:2% auto;
     padding:3%;
     background-color: aliceblue;
 }
+.register-login button{
+    background-color: rgb(94, 171, 239);
+    color:white;
+    margin-top:1%;
+    border-radius: 5px;
+    border:1px solid rgb(3, 127, 234);
+}
+.register-login button:hover{
+    background-color: coral;
+    color:antiquewhite;
+    cursor: pointer;
+    border:1px solid rgb(250, 68, 2);
+}
 .register-login .login{
     width: 50%;
     margin:auto;
 }
+/* .regsiter-login .line{
+    border:1px solid rgb(94, 171, 239);
+    background-color: pink;
+} */
 .register-login .register{
-    margin-top:2%;
     width: 50%;
     margin:auto;
 }
@@ -89,6 +107,7 @@ body{
     font-size: 1rem;
     color:rgb(94, 171, 239);
 }
+
 
 /* home.html - grid details */
 .home-container{
