@@ -93,10 +93,6 @@ body{
     width: 50%;
     margin:auto;
 }
-/* .regsiter-login .line{
-    border:1px solid rgb(94, 171, 239);
-    background-color: pink;
-} */
 .register-login .register{
     width: 50%;
     margin:auto;
@@ -129,13 +125,13 @@ body{
     color:white;
 }
 .home-search:hover{
-    background-color: #ef8058;
+    background-color: #703b28;
 }
 .home-checkout:hover{
-    background-color:#ef8058;
+    background-color:#703b28;
 }
 .home-add:hover{
-    background-color: #ef8058;
+    background-color: #703b28;
 }
 .home-info{
     background-color:transparent;
@@ -144,8 +140,12 @@ body{
     align-items: center;
     justify-content: center;
 }
+.home-info .name{
+    color: #703b28;
+    font-weight: 700;
+}
 .home-search{
-    background-color:antiquewhite;
+    background-color:beige;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,7 +155,7 @@ body{
     padding-bottom:55px;
 }
 .home-checkout{
-    background-color:rgb(222, 242, 189);
+    background-color:white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -163,13 +163,14 @@ body{
     padding-bottom:55px;
 }
 .home-add{
-    background-color:rgb(201, 187, 167);
+    background-color:beige;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-bottom:55px;
 }
+
 
 /* index.html - text general settings*/
 .container a{
