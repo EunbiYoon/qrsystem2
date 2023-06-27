@@ -273,6 +273,7 @@ body{
 .search-detail td a:hover{
     background-color:white;
     color:green;
+    font-size: 1.2rem;
 }
 
 
