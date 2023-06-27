@@ -258,6 +258,7 @@ body{
 .search-detail table th{
     background-color: #FFD676;
     color:black;
+    text-align: center;
 }
 .search-detail td a{
     background-color:green;
