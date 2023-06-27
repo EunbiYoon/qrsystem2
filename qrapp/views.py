@@ -96,6 +96,11 @@ def addgenView(request):
     return render(request,'add_generate.html')
 
 @login_required(login_url='login_url')
-def messageView(request):
+def msgSuccessView(request):
+    context={"message":"This is default message"}
+    return render(request,'message.html', context=context)
+
+@login_required(login_url='login_url')
+def msgFailView(request):
     context={"message":"This is default message"}
     return render(request,'message.html', context=context)

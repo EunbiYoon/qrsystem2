@@ -69,8 +69,10 @@ body{
     /* border-top:1px solid rgb(185, 151, 107); */
     text-align: center;
     height: 100%;
-    padding:1%;
-    margin:auto;
+    padding:1.5%;
+}
+.base-foot h5{
+    margin:0;
 }
 .base-foot a{
     color:rgb(0, 194, 0);
@@ -589,15 +591,40 @@ body{
     width: 20%;
 }
 .message .info{
-    color:navy;   
+    color:#2B2B2B; 
     text-transform: inherit;
+    margin-bottom:2rem;
 }
-.message .back{
-    background-color: aliceblue;
+.message .menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
-.message .result{
-    background-color: beige;
+.message .menu .back{
+    grid-column:1;
 }
-.message .home{
-    background-color: greenyellow;
+.message .menu .result{
+    grid-column:2;
+}
+.message .menu .home{
+    grid-column:3;
+}
+.message a{
+    text-decoration: none;
+    background-color: rgba(128, 128, 128, 0.356);
+    border: 2px dashed #2B2B2B;
+    color: #2B2B2B;
+    margin:1rem;
+    cursor: pointer;
+}
+.message a:hover{
+    background-color: #FDA507;
+    color:white;
+}
+
+
+
+
+/* admin */
+.brand-text font-weight-light{
+    content: 'erer';
 }
