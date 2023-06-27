@@ -85,35 +85,33 @@ body{
 /*login.html*/
 .register-login{
     margin:2% auto;
-    padding:3%;
-    background-color: aliceblue;
+    padding:2%;
+    background-color: lightgray;
+    border: 2px dashed #2B2B2B;
+    width: 50%;
 }
 .register-login button{
-    background-color: rgb(94, 171, 239);
-    color:white;
+    background-color: #FDA507;
+    color:#2B2B2B;
     margin-top:1%;
     border-radius: 5px;
-    border:1px solid rgb(3, 127, 234);
 }
 .register-login button:hover{
-    background-color: coral;
-    color:antiquewhite;
+    background-color: #2B2B2B;
+    color:#FDA507;
     cursor: pointer;
-    border:1px solid rgb(250, 68, 2);
 }
 .register-login .login{
-    width: 50%;
     margin:auto;
 }
 .register-login .register{
-    width: 50%;
     margin:auto;
 }
 .register-login .register h5{
-    font-weight: 400;
+    font-weight: 500;
     text-transform:inherit;
     font-size: 1rem;
-    color:rgb(94, 171, 239);
+    color:#2B2B2B;
 }
 
 

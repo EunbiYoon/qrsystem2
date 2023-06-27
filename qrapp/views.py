@@ -53,7 +53,7 @@ def checkoutView(request):
                     context={
                         "error":"Receiver already checkout!"
                     }
-                    return render(request,'msg_success.html', context=context)
+                    return render(request,'msg_fail.html', context=context)
                 else:
                     entry.check_out=True
                     entry.save()
@@ -99,15 +99,16 @@ def addscanView(request):
             entry_exists=QRCodeData.objects.filter(code_data=scan_track).exists()
             if entry_exists:
                 context={
-                    "message":"scanning result already exists!"
+                    "error":"scanning result already exists!"
                 }
+                return render(request,'msg_fail.html', context=context)
             else:
                 qr_code_scan=QRCodeData(receiver=scan_receiver, code_data=scan_track)
                 qr_code_scan.save()
                 context={
                     "message":"add scanning successfully!"
                 }
-            return render(request,'msg_success.html', context=context)
+                return render(request,'msg_success.html', context=context)
     return render(request,'add_scan.html')
 
 @login_required(login_url='login_url')
@@ -121,5 +122,5 @@ def msgSuccessView(request):
 
 @login_required(login_url='login_url')
 def msgFailView(request):
-    context={"message":"This is default message"}
+    context={"error":"This is default message"}
     return render(request,'msg_fail.html', context=context)
