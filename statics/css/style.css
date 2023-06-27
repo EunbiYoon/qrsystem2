@@ -20,6 +20,9 @@ body{
     display: flex;
     align-items: center;
 }
+.base-top .base-title h3{
+    font-weight: 700;
+}
 .base-top .base-menu{
     display: grid;
     grid-template-columns:1fr 1fr 1fr 1fr;
@@ -38,6 +41,9 @@ body{
     border: 2px solid whitesmoke;
     border-radius: 15px;
     text-align: center;
+}
+.base-top .base-login h4{
+    margin:0;
 }
 .base-top .base-login .msg{
     grid-row:1;
