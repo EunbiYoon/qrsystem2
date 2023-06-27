@@ -427,7 +427,7 @@ body{
     font-weight: 600;
 }
 .scan-track .reader{
-    background-color:#CDC8C2;
+    background-color:#dfdbd7;
     border-radius: 15px 15px 0 0;
 }
 .scan-track .result{
@@ -441,7 +441,7 @@ body{
     display: none;
 }
 .scan-track .html5-qrcode-element{
-    background-color:#ef8058;
+    background-color:grey;
     color:white;
     border-radius: 10px;
     font-size:1.5rem;
@@ -453,13 +453,13 @@ body{
     font-weight: 600;
 }
 .scan-track .html5-qrcode-element:hover{
-    background-color:rgb(107, 87, 60);
+    background-color:rgb(0, 194, 0);
 }
 .scan-track input{
-    background-color:antiquewhite;
+    background-color:#dfdbd7;
     border-radius: 10px;
     text-align: center;
-    color:coral;
+    color:#2B2B2B;
     font-weight:600;
     border:1px solid #CDC8C2;
 }
@@ -479,8 +479,8 @@ body{
     margin-bottom:8%;
 }
 .scan-submit button{
-    background-color:rgb(222, 242, 189);
-    color:coral;
+    background-color:rgb(0, 194, 0);
+    color:whitesmoke;
     border:1px solid #CDC8C2;
     border-radius: 10px;
     font-size: 2rem;
@@ -488,8 +488,9 @@ body{
     font-weight: 600;
 }
 .scan-submit button:hover{
-    background-color:rgb(87, 97, 74);
-    color:white;
+    background-color:whitesmoke;
+    color:rgb(0, 194, 0);
+    border:2px dashed rgb(0, 194, 0);
 }
 .scan .element.style{
     border:1px solid black;
