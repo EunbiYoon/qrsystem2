@@ -13,7 +13,7 @@ from django.contrib.auth.decorators import login_required
 class homeView(TemplateView):
     template_name='home.html'
 
-@login_required
+@login_required(login_url='login_url')
 def searchView(request):
     item_list=QRCodeData.objects.all()
     username=request.user.username
@@ -24,7 +24,7 @@ def searchView(request):
     return render(request, 'search.html', context)
 
 
-@login_required
+@login_required(login_url='login_url')
 def checkoutView(request):
     if request.method=='POST':
         scan_track=request.POST.get('result')
@@ -56,11 +56,11 @@ def checkoutView(request):
             return render(request,'message.html', context=context)
     return render(request,'checkout.html')
 
-@login_required
+@login_required(login_url='login_url')
 def addView(request):
     return render(request,'add.html')
 
-@login_required
+@login_required(login_url='login_url')
 def addscanView(request):
     if request.method=='POST':
         scan_track=request.POST.get('result')
@@ -91,11 +91,11 @@ def addscanView(request):
         return render(request,'message.html', context=context)
     return render(request,'add_scan.html')
 
-@login_required
+@login_required(login_url='login_url')
 def addgenView(request):
     return render(request,'add_generate.html')
 
-@login_required
+@login_required(login_url='login_url')
 def messageView(request):
     context={"message":"This is default message"}
     return render(request,'message.html', context=context)
