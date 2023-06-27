@@ -7,6 +7,7 @@ from django.views.generic import TemplateView, ListView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from user.models import User
 from django.contrib.auth.decorators import login_required
+import datetime
 
 # Create your views here.
 
@@ -35,7 +36,7 @@ def checkoutView(request):
         try:
             entry=QRCodeData.objects.get(code_data=scan_track)
             admin_check_last=entry.admin_check
-            user_check_last=entry.check_out
+            user_check_last=entry.receiver_check
             if user_authority.is_superuser:
                 if admin_check_last==True:
                     context={
@@ -56,7 +57,7 @@ def checkoutView(request):
                     }
                     return render(request,'msg_fail.html', context=context)
                 else:
-                    entry.check_out=True
+                    entry.receiver_check=True
                     entry.save()
                     context={
                         "message":"Receiver checkout successfully!"
