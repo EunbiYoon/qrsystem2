@@ -361,6 +361,7 @@ body{
     width: 50%;
     margin: auto auto 5% auto;
     background-color: #CDC8C2;
+    border-radius: 15px;
 }
 .add .add-menu a{
     text-decoration: none;
@@ -369,6 +370,7 @@ body{
 }
 .add .add-menu a h3{
     background-color: #FFD676;
+    border-radius: 10px;
     margin:auto;
     width: 90%;
     padding:2%;
