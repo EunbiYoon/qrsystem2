@@ -271,8 +271,8 @@ body{
     padding:3%
 }
 .search-detail td a:hover{
-    background-color:lightgray;
-    color:#292929;
+    background-color:white;
+    color:green;
 }
 
 

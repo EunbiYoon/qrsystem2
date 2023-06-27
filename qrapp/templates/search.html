@@ -13,7 +13,7 @@
                 <th>Tracking Number</th>
                 <th>Arriving Date</th>
                 <th>Receiver</th>
-                <th>Check Out</th>
+                <th>Receiver Check</th>
                 <th>Security Check</th>
               </tr>
             </thead>
@@ -29,7 +29,7 @@
                         {% else %}
                             <td>
                                 {% if username == item.receiver %}
-                                    <center><a href="{% url 'checkout_url' %}">Checkout Package</a></center>
+                                    <center><a href="{% url 'checkout_url' %}">Checkout</a></center>
                                 {% else %}
                                     <center>-</center>
                                 {% endif %}
@@ -41,7 +41,7 @@
                         {% else %}
                             <td>
                                 {% if user.is_superuser %}
-                                    <center><a href="{% url 'checkout_url' %}">Checkout Package</a></center>
+                                    <center><a href="{% url 'checkout_url' %}">Checkout</a></center>
                                 {% else %}
                                     <center>-</center>
                                 {% endif %}
