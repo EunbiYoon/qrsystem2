@@ -7,7 +7,9 @@ class QRCodeData(models.Model):
     receiver=models.CharField(max_length=255)
     receiver_check=models.BooleanField(default=False)
     admin_check=models.BooleanField(default=False)
-    
+    receiver_at=models.DateTimeField(blank=True, null=True)
+    admin_at=models.DateTimeField(blank=True,null=True)
+
     def __str__(self):
         return str(self.code_data)+ ' | Arrived at ' + str(self.arriving_at.strftime("%m/%d %H:%M"))
     class Meta:

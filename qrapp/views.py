@@ -7,7 +7,7 @@ from django.views.generic import TemplateView, ListView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from user.models import User
 from django.contrib.auth.decorators import login_required
-import datetime
+from django.utils import timezone
 
 # Create your views here.
 
@@ -21,7 +21,6 @@ def searchView(request):
     context={
         'item_list':item_list,
         'username':username,
-        "date":"06/26/23 01:44 p.m."
     }
     return render(request, 'search.html', context)
 
@@ -45,6 +44,7 @@ def checkoutView(request):
                     return render(request,'msg_fail.html', context=context)
                 else:
                     entry.admin_check=True
+                    entry.admin_at=timezone.now()
                     entry.save()
                     context={
                         "message":"Admin checkout successfully!",
@@ -58,6 +58,7 @@ def checkoutView(request):
                     return render(request,'msg_fail.html', context=context)
                 else:
                     entry.receiver_check=True
+                    entry.receiver_at=timezone.now()
                     entry.save()
                     context={
                         "message":"Receiver checkout successfully!"

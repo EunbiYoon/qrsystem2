@@ -25,7 +25,7 @@
                         <td>{{ item.receiver }}</td>
 
                         {% if item.receiver_check %}
-                            <td>{{ date }}</td>
+                            <td>{{ item.receiver_at|date:"m/d/y h:i a" }}</td>
                         {% else %}
                             <td>
                                 {% if username == item.receiver %}
@@ -37,7 +37,7 @@
                         {% endif %}
 
                         {% if item.admin_check %}
-                            <td>{{ date }}</td>
+                            <td>{{ item.admin_at|date:"m/d/y h:i a" }}</td>
                         {% else %}
                             <td>
                                 {% if user.is_superuser %}
