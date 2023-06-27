@@ -500,15 +500,19 @@ body{
 /* add_generate.html*/
 .generate{
     background-color:white;
-    font-size:2rem;
     padding:4% 0;
     height: 100%;
     justify-content: center;
     align-items: center;
-    color:coral;
 }
+.generate h1{
+    color:red;
+    font-weight: 800;
+}
+
 .generate .generate-content{
-    background-color:rgb(228, 223, 216);
+    background-color:rgba(128, 128, 128, 0.356);
+    border: 2px dashed grey;
     border-radius: 10px;
     margin:auto;
     text-align: center;
@@ -517,42 +521,40 @@ body{
     margin:auto;
 }
 .generate .generate-content img{
-    margin:0 0 16% 0;
+    padding-bottom: 5%;
 }
 .generate option{
-    font-size:1.2rem;
-    font-weight: 500;
-    color:coral;
+    color:#292929;
 }
 .generate #size{
-    font-size:1.5rem;
-    font-weight: 500;
-    color:coral; 
+    color:#292929;
     border-radius: 10px;
-    border:2px solid rgb(107, 87, 60);
+    border:2px solid grey;
+    width: 100%;
 }
 .generate textarea{
-    font-size:1.5rem;
-    color:coral;
+    color:#2B2B2B;
     background-color:#FFFFFF;
     border-radius: 10px;
-    border:2px solid rgb(107, 87, 60);
+    border:2px solid grey;
     font-weight: 600;
-}
-.generate input{
-    background-color:#FFFFFF;
-    color:coral;
-    border-radius: 10px;
-    font-size:1.5rem;
-    border:2px solid rgb(107, 87, 60);
-}
-.generate input:hover{
-    background-color: rgb(107, 87, 60);
-    color:#FFFFFF;
+    width: 100%;
 }
 .generate textarea::placeholder{
-    color:coral;
-    font-size:1ren;
+    color:grey;
+}
+.generate input{
+    background-color:whitesmoke;
+    color:red;
+    border-radius: 10px;
+    border:2px solid grey;
+    width: 100%;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.generate input:hover{
+    background-color: grey;
+    color:whitesmoke;
 }
 
 /* message.html */
