@@ -12,7 +12,7 @@
                     <h5 id="info">Scan QR Code or Enter Manually</h5>
                     <div name="reader" class="reader" id="reader"></div>
                     <div id="choose" class="choose">or</div>
-                    <input type="text" class="result" name="result" id="result" placeholder="1234 5678 9123">
+                    <input type="text" class="result" name="result" id="result" placeholder="1234 5678 9123" oninput="addSpaces()">
                     <button class="submit" id="submit" type="submit">Save</button>
                 </div>
             </form>
@@ -21,5 +21,6 @@
     {% load static %}
     <script src="{% static 'js/html5-qrcode.min.js' %}"></script>
     <script src="{% static 'js/qrscan2.js' %}"></script>
+    <script src="{% static 'js/inputspace.js' %}"></script>
 
 {% endblock %}
