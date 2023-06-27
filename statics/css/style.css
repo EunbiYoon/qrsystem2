@@ -555,7 +555,7 @@ body{
     border:2px solid grey;
     width: 100%;
     text-transform: capitalize;
-    font-weight: 600;
+    font-weight: 700;
 }
 .generate input:hover{
     background-color: red;
