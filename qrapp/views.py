@@ -98,9 +98,9 @@ def addgenView(request):
 @login_required(login_url='login_url')
 def msgSuccessView(request):
     context={"message":"This is default message"}
-    return render(request,'message.html', context=context)
+    return render(request,'msg_success.html', context=context)
 
 @login_required(login_url='login_url')
 def msgFailView(request):
     context={"message":"This is default message"}
-    return render(request,'message.html', context=context)
+    return render(request,'msg_fail.html', context=context)

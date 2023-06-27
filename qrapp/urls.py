@@ -9,5 +9,5 @@ urlpatterns = [
     path('add/generate',addgenView,name='addgen_url'),
     path('add/scan',addscanView,name='addscan_url'),
     path('success',msgSuccessView,name='msgsuccess_url'),
-    path('failed',msgFailView,name='msgfail_url')
+    path('error',msgFailView,name='msgfail_url')
 ]
