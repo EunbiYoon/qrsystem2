@@ -596,7 +596,6 @@ body{
 }
 .message-success .info{
     color:rgb(0, 194, 0);
-    text-transform: inherit;
     margin-bottom:3rem;
     font-weight: 800;
 }
@@ -619,13 +618,13 @@ body{
 }
 .message-success a{
     text-decoration: none;
-    background-color:rgb(0, 194, 0);
+    background-color:#292929bc;
     color: whitesmoke;
     padding:1rem;
     cursor: pointer;
 }
 .message-success a:hover{
-    background-color: #FDA507;
+    background-color: rgb(0, 194, 0);
     color:white;
 }
 .message-success a h4{
@@ -644,7 +643,6 @@ body{
 }
 .message-fail .info{
     color:red;
-    text-transform: inherit;
     margin-bottom:3rem;
     font-weight: 800;
 }
@@ -667,14 +665,14 @@ body{
 }
 .message-fail a{
     text-decoration: none;
-    background-color:red;
+    background-color:#292929bc;
     color: whitesmoke;
     padding:1rem;
     cursor: pointer;
 }
 .message-fail a:hover{
-    background-color: #FDA507;
-    color:white;
+    background-color:red;
+    font-weight: 700;
 }
 .message-fail a h4{
     margin:0;

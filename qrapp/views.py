@@ -29,31 +29,48 @@ def checkoutView(request):
     if request.method=='POST':
         scan_track=request.POST.get('result')
         user_authority=request.user
+
         #check code_data exist
         try:
             entry=QRCodeData.objects.get(code_data=scan_track)
+            admin_check_last=entry.admin_check
+            user_check_last=entry.check_out
             if user_authority.is_superuser:
-                entry.admin_check=True
-                entry.save()
-                context={
-                    "message":"admin checkout successfully!"
-                }
+                if admin_check_last==True:
+                    context={
+                        "error":"Admin already checkout!"
+                    }
+                    return render(request,'msg_fail.html', context=context)
+                else:
+                    entry.admin_check=True
+                    entry.save()
+                    context={
+                        "message":"Admin checkout successfully!"
+                    }
+                    return render(request,'msg_success.html', context=context)
             elif user_authority.is_staff:
-                entry.check_out=True
-                entry.save()
-                context={
-                    "message":"receiver checkout successfully!"
-                }
+                if user_check_last==True:
+                    context={
+                        "error":"Receiver already checkout!"
+                    }
+                    return render(request,'msg_success.html', context=context)
+                else:
+                    entry.check_out=True
+                    entry.save()
+                    context={
+                        "message":"Receiver checkout successfully!"
+                    }
+                    return render(request,'msg_success.html', context=context)
             else:
                 context={
-                    "message":"Error"
+                    "error":"New Error Found"
                 }
-            return render(request,'message.html', context=context)
+                return render(request,'msg_fail.html', context=context)
         except QRCodeData.DoesNotExist:
             context={
-                "message":"Tracking Number Not Exists"
+                "error":"Tracking number not exists"
             }
-            return render(request,'message.html', context=context)
+            return render(request,'msg_fail.html', context=context)
     return render(request,'checkout.html')
 
 @login_required(login_url='login_url')
@@ -69,12 +86,14 @@ def addscanView(request):
         #if each colum empty
         if not scan_track:
             context={
-                "message":"Tracking Number is empty!"
+                "error":"Tracking Number is empty!"
             }
+            return render(request,'msg_fail.html', context=context)
         elif not scan_receiver:
             context={
-                "message":"Receiever is empty!"
+                "error":"Receiever is empty!"
             }
+            return render(request,'msg_fail.html', context=context)
         #compare existed query
         else:
             entry_exists=QRCodeData.objects.filter(code_data=scan_track).exists()
@@ -88,7 +107,7 @@ def addscanView(request):
                 context={
                     "message":"add scanning successfully!"
                 }
-        return render(request,'message.html', context=context)
+            return render(request,'msg_success.html', context=context)
     return render(request,'add_scan.html')
 
 @login_required(login_url='login_url')
