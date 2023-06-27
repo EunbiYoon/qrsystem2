@@ -120,7 +120,10 @@ body{
 }
 .home-container a{
     text-decoration: none;
+}
+.home-container a h1{
     color:#FDA507;
+    font-weight: 800;
 }
 .home-container a:hover{
     color:white;
@@ -129,7 +132,7 @@ body{
     background-color: red;
 }
 .home-checkout:hover{
-    background-color:#FDA507;
+    background-color:#2B2B2B;
 }
 .home-add:hover{
     background-color: rgb(0, 194, 0);
