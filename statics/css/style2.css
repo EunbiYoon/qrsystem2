@@ -34,6 +34,9 @@ body{
     text-align: center;
     border-left:2px solid antiquewhite;
 }
+.base-top .base-menu h4{
+    margin:0;
+}
 .base-top a:hover{
     color:red;
 }
@@ -582,33 +585,33 @@ body{
 }
 
 /* message.html */
-.message{
+.message-success{
     text-align: center;
     margin:3%;
     padding:10%;
 }
-.message img{
+.message-success img{
     width: 20%;
 }
-.message .info{
+.message-success .info{
     color:#2B2B2B; 
     text-transform: inherit;
     margin-bottom:2rem;
 }
-.message .menu{
+.message-success .menu{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-.message .menu .back{
+.message-success .menu .back{
     grid-column:1;
 }
-.message .menu .result{
+.message-success .menu .result{
     grid-column:2;
 }
-.message .menu .home{
+.message-success .menu .home{
     grid-column:3;
 }
-.message a{
+.message-success a{
     text-decoration: none;
     background-color: rgba(128, 128, 128, 0.356);
     border: 2px dashed #2B2B2B;
@@ -616,11 +619,49 @@ body{
     margin:1rem;
     cursor: pointer;
 }
-.message a:hover{
+.message-success a:hover{
     background-color: #FDA507;
     color:white;
 }
 
+.message-fail{
+    text-align: center;
+    margin:3%;
+    padding:10%;
+}
+.message-fail img{
+    width: 20%;
+}
+.message-fail .info{
+    color:#2B2B2B; 
+    text-transform: inherit;
+    margin-bottom:2rem;
+}
+.message-fail .menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.message-fail .menu .back{
+    grid-column:1;
+}
+.message-fail .menu .result{
+    grid-column:2;
+}
+.message-fail .menu .home{
+    grid-column:3;
+}
+.message-fail a{
+    text-decoration: none;
+    background-color: rgba(128, 128, 128, 0.356);
+    border: 2px dashed #2B2B2B;
+    color: #2B2B2B;
+    margin:1rem;
+    cursor: pointer;
+}
+.message-fail a:hover{
+    background-color: #FDA507;
+    color:white;
+}
 
 
 
