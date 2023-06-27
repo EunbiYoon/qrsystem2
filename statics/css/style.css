@@ -11,7 +11,7 @@ body{
 }
 .base-top{
     color:white;
-    background-color:#703b28;
+    background-color:#2B2B2B;
     display: grid;
     grid-template-columns: 2fr 3fr 1fr;
     padding:1%;
@@ -27,15 +27,15 @@ body{
 }
 .base-top .base-menu a{
     text-decoration: none;
-    color:antiquewhite;
+    color:#FDA507;
     text-align: center;
     border-left:2px solid antiquewhite;
 }
 .base-top a:hover{
-    color:coral;
+    color:red;
 }
 .base-top .base-login{
-    border: 2px solid antiquewhite;
+    border: 2px solid whitesmoke;
     border-radius: 15px;
     text-align: center;
 }
@@ -49,24 +49,25 @@ body{
 }
 .base-top .base-login .lik a{   
     text-decoration: none;
-    color:antiquewhite;
+    color:#FDA507;
 }
 .base-top .base-login .lik a:hover{   
-    color:coral;
+    color:rgb(0, 194, 0);
 }
 .base-container{
     background-color: whitesmoke;
 }
 .base-foot{
-    color:coral;
-    background-color: antiquewhite;
+    color:#292929;
+    background-color: whitesmoke;
+    /* border-top:1px solid rgb(185, 151, 107); */
     text-align: center;
     height: 100%;
     padding:1%;
     margin:auto;
 }
 .base-foot a{
-    color:rgb(185, 151, 107);
+    color:rgb(0, 194, 0);
 }
 
 
@@ -111,7 +112,7 @@ body{
     background-color: white;
     height: 100%;
     margin: auto;
-    color:rgb(185, 151, 107);
+    color:#7F7F7F;
 }
 .home-container img{
     width: 800px;
@@ -119,19 +120,19 @@ body{
 }
 .home-container a{
     text-decoration: none;
-    color:orangered;
+    color:#FDA507;
 }
 .home-container a:hover{
     color:white;
 }
 .home-search:hover{
-    background-color: #703b28;
+    background-color: red;
 }
 .home-checkout:hover{
-    background-color:#703b28;
+    background-color:#FDA507;
 }
 .home-add:hover{
-    background-color: #703b28;
+    background-color: rgb(0, 194, 0);
 }
 .home-info{
     background-color:transparent;
@@ -141,11 +142,11 @@ body{
     justify-content: center;
 }
 .home-info .name{
-    color: #703b28;
+    color: #292929;
     font-weight: 700;
 }
 .home-search{
-    background-color:beige;
+    background-color:#eae7e7;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -163,7 +164,7 @@ body{
     padding-bottom:55px;
 }
 .home-add{
-    background-color:beige;
+    background-color:#eae7e7;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -216,36 +217,36 @@ body{
 }
 .search-detail input{
     margin-bottom:1%;
-    border:3px solid rgb(176, 166, 154);
+    border:3px dashed #2B2B2B;
     font-size:2rem;
-    color:coral;
+    color:green;
+    font-weight: 600;
     background-color:white;
 }
 .search-detail input::placeholder{
-    color:coral;
+    color:green;
 }
 .search-detail table, .search-detail tr, .search-detail th, .search-detail td{
-    border:2px solid rgb(176, 166, 154);
+    border:2px solid #2B2B2B;
     border-collapse: collapse;
     padding:10px;
 }
 .search-detail table th{
-    background-color: antiquewhite;
+    background-color: #FFD676;
     color:black;
 }
 .search-detail a{
-    background-color: antiquewhite;
-    color:coral;
+    background-color:green;
+    color:whitesmoke;
     border-radius:5px;
     padding:2px;
-    border: 1px solid coral;
     font-weight:600;
     text-decoration: none;
 }
 .search-detail a:hover{
-    background-color:coral;
-    border: 1px solid red;
-    color:white;
+    background-color:white;
+    border: 2px solid green;
+    color:green;
     font-weight:600;
 }
 
@@ -259,7 +260,7 @@ body{
     background-image:url('https://as1.ftcdn.net/v2/jpg/04/43/27/64/1000_F_443276418_f5KzpPzH8ksaGoRlTnio2AI0yhpo0rzL.jpg');
 }
 .checkout-container{
-    background-color: rgb(222, 242, 189);
+    background-color: #CDC8C2;
     text-align: center;
     font-size:2rem;
     padding:2%;
@@ -280,7 +281,8 @@ body{
     font-weight: 600;
 }
 .checkout-package h1{
-    color:coral;
+    color:#f6a002;
+    font-weight: 800;
 }
 .checkout-package h5{
     color:rgb(107, 87, 60);
@@ -288,7 +290,7 @@ body{
 }
 .checkout-package .reader{
     width: 600px;
-    background-color:antiquewhite;
+    background-color: #2b2b2b91;
     width: 100%;
     border-radius: 15px 15px 0 0;
 }
@@ -304,8 +306,8 @@ body{
     display: none;
 }
 .checkout-package .html5-qrcode-element{
-    background-color:#ef8058;
-    color:white;
+    background-color:whitesmoke;
+    color:#2B2B2B;
     border-radius: 10px;
     font-size:1.5rem;
     width: 90%;
@@ -316,29 +318,30 @@ body{
     font-weight: 600;
 }
 .checkout-package .html5-qrcode-element:hover{
-    background-color:rgb(107, 87, 60);
+    background-color:#f6a002;
+    color:whitesmoke;
 }
 .checkout-package input{
-    color:coral;
+    color:#ffb120;
     font-weight:600;
-    background-color: antiquewhite;
+    background-color: #2b2b2b91;
     border:1px solid #CDC8C2;
 }
 .checkout-package input::placeholder{
-    color:rgba(107, 87, 60, 0.446);
+    color:whitesmoke;
     font-weight:600;
 }
 .checkout-package .submit{
-    background-color:rgb(222, 242, 189);
-    color:coral;
-    border:1px solid #CDC8C2;
+    background-color: whitesmoke;
+    color:#2B2B2B;
+    border:2px dashed #CDC8C2;
     border-radius: 10px;
     font-size: 2rem;
     margin:1% 1% 8% 1%;
     font-weight: 600;
 }
 .checkout-package button:hover{
-    background-color:rgb(87, 97, 74);
+    background-color:#f6a002;
     color:white;
 }
 
@@ -346,18 +349,18 @@ body{
 .add{
     text-align: center;
     padding:5%;
-    background-color:rgb(222, 242, 189);
+    background-color:whitesmoke;
 }
 .add h1{
-    color:rgb(87, 97, 74);
-    font-weight: 700;
+    color:#323232;
+    font-weight: 800;
     margin-bottom:2%
 }
 .add .add-menu{
-    border:3px dashed rgb(122, 142, 91);
+    border:3px dashed #2B2B2B;
     width: 50%;
     margin: auto auto 5% auto;
-    background-color: rgb(255, 253, 240);
+    background-color: #CDC8C2;
 }
 .add .add-menu a{
     text-decoration: none;
@@ -365,15 +368,16 @@ body{
     color:coral;
 }
 .add .add-menu a h3{
-    background-color:rgb(249, 226, 196);
+    background-color: #FFD676;
     margin:auto;
     width: 90%;
     padding:2%;
-    font-weight: 600;
+    font-weight: 800;
+    color:#2B2B2B;
 }
 .add .add-menu a h3:hover{
-    background-color:rgb(87, 97, 74);
-    color:white;
+    background-color:whitesmoke;
+    color:red;
     cursor: pointer;
 }
 
@@ -387,7 +391,7 @@ body{
     background-image:url('https://as1.ftcdn.net/v2/jpg/04/43/27/64/1000_F_443276418_f5KzpPzH8ksaGoRlTnio2AI0yhpo0rzL.jpg');
 }
 .scan-container{
-    background-color: rgb(222, 242, 189);
+    background-color: rgb(0, 194, 0);
     text-align: center;
     font-size:2rem;
     padding:2%;
