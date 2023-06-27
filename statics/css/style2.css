@@ -237,6 +237,7 @@ body{
     width:90%;
     margin:3% auto;
     padding:2% 0;
+    align-items: center;
 }
 .search-detail input{
     margin-bottom:1%;
@@ -258,19 +259,19 @@ body{
     background-color: #FFD676;
     color:black;
 }
-.search-detail a{
+.search-detail td a{
     background-color:green;
     color:whitesmoke;
     border-radius:5px;
-    padding:2px;
     font-weight:600;
     text-decoration: none;
+    text-align: center;
+    margin:auto;
+    padding:3%
 }
-.search-detail a:hover{
-    background-color:white;
-    border: 2px solid green;
-    color:green;
-    font-weight:600;
+.search-detail td a:hover{
+    background-color:lightgray;
+    color:#292929;
 }
 
 

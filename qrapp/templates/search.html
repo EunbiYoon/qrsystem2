@@ -25,23 +25,25 @@
                         <td>{{ item.receiver }}</td>
 
                         {% if item.check_out %}
-                            <td>Yes</td>
+                            <td>{{ date }}</td>
                         {% else %}
                             <td>
-                                No 
                                 {% if username == item.receiver %}
-                                    <a href="{% url 'checkout_url' %}">Scan</a>
+                                    <center><a href="{% url 'checkout_url' %}">Checkout Package</a></center>
+                                {% else %}
+                                    <center>-</center>
                                 {% endif %}
                             </td>
                         {% endif %}
 
                         {% if item.admin_check %}
-                            <td>Yes</td>
+                            <td>{{ date }}</td>
                         {% else %}
                             <td>
-                                No
                                 {% if user.is_superuser %}
-                                    <a href="{% url 'checkout_url' %}">Scan</a>
+                                    <center><a href="{% url 'checkout_url' %}">Checkout Package</a></center>
+                                {% else %}
+                                    <center>-</center>
                                 {% endif %}
                             </td>
                         {% endif %}

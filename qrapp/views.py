@@ -19,7 +19,8 @@ def searchView(request):
     username=request.user.username
     context={
         'item_list':item_list,
-        'username':username
+        'username':username,
+        "date":"06/26/23 01:44 p.m."
     }
     return render(request, 'search.html', context)
 
@@ -45,7 +46,7 @@ def checkoutView(request):
                     entry.admin_check=True
                     entry.save()
                     context={
-                        "message":"Admin checkout successfully!"
+                        "message":"Admin checkout successfully!",
                     }
                     return render(request,'msg_success.html', context=context)
             elif user_authority.is_staff:
@@ -63,12 +64,12 @@ def checkoutView(request):
                     return render(request,'msg_success.html', context=context)
             else:
                 context={
-                    "error":"New Error Found"
+                    "error":"New error found..."
                 }
                 return render(request,'msg_fail.html', context=context)
         except QRCodeData.DoesNotExist:
             context={
-                "error":"Tracking number not exists"
+                "error":"Tracking number not exists!"
             }
             return render(request,'msg_fail.html', context=context)
     return render(request,'checkout.html')
@@ -86,7 +87,7 @@ def addscanView(request):
         #if each colum empty
         if not scan_track:
             context={
-                "error":"Tracking Number is empty!"
+                "error":"Tracking number is empty!"
             }
             return render(request,'msg_fail.html', context=context)
         elif not scan_receiver:
@@ -99,14 +100,14 @@ def addscanView(request):
             entry_exists=QRCodeData.objects.filter(code_data=scan_track).exists()
             if entry_exists:
                 context={
-                    "error":"scanning result already exists!"
+                    "error":"Tracking number already exists!"
                 }
                 return render(request,'msg_fail.html', context=context)
             else:
                 qr_code_scan=QRCodeData(receiver=scan_receiver, code_data=scan_track)
                 qr_code_scan.save()
                 context={
-                    "message":"add scanning successfully!"
+                    "message":"Data save successfully!"
                 }
                 return render(request,'msg_success.html', context=context)
     return render(request,'add_scan.html')
