@@ -30,7 +30,8 @@ def checkoutView(request):
     if request.method=='POST':
         scan_track=request.POST.get('result')
         user_authority=request.user
-
+        #remove input 4 digit space
+        scan_track=scan_track.replace(" ","")
         #check code_data exist
         try:
             entry=QRCodeData.objects.get(code_data=scan_track)
@@ -66,7 +67,7 @@ def checkoutView(request):
                     return render(request,'msg_success.html', context=context)
             else:
                 context={
-                    "error":"New error found..."
+                    "error":"User Authority Type Error..."
                 }
                 return render(request,'msg_fail.html', context=context)
         except QRCodeData.DoesNotExist:
