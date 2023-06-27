@@ -558,7 +558,7 @@ body{
     font-weight: 600;
 }
 .generate input:hover{
-    background-color: grey;
+    background-color: red;
     color:whitesmoke;
 }
 
