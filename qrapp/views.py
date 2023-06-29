@@ -24,6 +24,58 @@ def searchView(request):
     }
     return render(request, 'search.html', context)
 
+@login_required(login_url='login_url')
+def searchcheckoutView(request):
+    if request.method=='POST':
+        scan_track=request.POST.get('result')
+        assgined_track=request.POST.get
+        user_authority=request.user
+        print(scan_track)
+        #remove input 4 digit space
+        scan_track=scan_track.replace(" ","")
+        print(scan_track)
+        #check code_data exist
+        try:
+            entry=QRCodeData.objects.get(code_data=scan_track)
+            admin_check_last=entry.admin_check
+            user_check_last=entry.receiver_check
+            # superuser
+            if user_authority.is_superuser:
+                if admin_check_last==True:
+                    context={
+                        "error":"Admin already checkout!"
+                    }
+                    return render(request,'msg_fail.html', context=context)
+                else:
+                    entry.admin_check=True
+                    entry.admin_at=timezone.now()
+                    entry.save()
+                    context={
+                        "message":"Admin checkout successfully!",
+                    }
+                    return render(request,'msg_success.html', context=context)
+            # staffuser
+            else:
+                if user_check_last==True:
+                    context={
+                        "error":"Receiver already checkout!"
+                    }
+                    return render(request,'msg_fail.html', context=context)
+                else:
+                    entry.receiver_check=True
+                    entry.receiver_at=timezone.now()
+                    entry.save()
+                    context={
+                        "message":"Receiver checkout successfully!"
+                    }
+                    return render(request,'msg_success.html', context=context)
+        except QRCodeData.DoesNotExist:
+            context={
+                "error":"Tracking number not exists!"
+            }
+            return render(request,'msg_fail.html', context=context)
+    return render(request,'checkout.html')
+
 
 @login_required(login_url='login_url')
 def checkoutView(request):
@@ -39,6 +91,7 @@ def checkoutView(request):
             entry=QRCodeData.objects.get(code_data=scan_track)
             admin_check_last=entry.admin_check
             user_check_last=entry.receiver_check
+            # superuser
             if user_authority.is_superuser:
                 if admin_check_last==True:
                     context={
@@ -53,6 +106,7 @@ def checkoutView(request):
                         "message":"Admin checkout successfully!",
                     }
                     return render(request,'msg_success.html', context=context)
+            # staffuser
             else:
                 if user_check_last==True:
                     context={

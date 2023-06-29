@@ -20,16 +20,16 @@
             <tbody>
                 {% for item in item_list %}
                     <tr>
-                        <td>{{ item.code_data }}</td>
-                        <td>{{ item.arriving_at|date:"m/d/y h:i a" }}</td>
-                        <td>{{ item.receiver }}</td>
+                        <td><p>{{ item.code_data }}</p></td>
+                        <td><p>{{ item.arriving_at|date:"m/d/y h:i a" }}</p></td>
+                        <td><p>{{ item.receiver }}</p></td>
 
                         {% if item.receiver_check %}
-                            <td>{{ item.receiver_at|date:"m/d/y h:i a" }}</td>
+                            <td><p>{{ item.receiver_at|date:"m/d/y h:i a" }}</p></td>
                         {% else %}
                             <td>
                                 {% if username == item.receiver %}
-                                    <center><a href="{% url 'checkout_url' %}">Checkout</a></center>
+                                    <center><a href="{% url 'searchout_url' %}">Checkout</a></center>
                                 {% else %}
                                     <center>-</center>
                                 {% endif %}
@@ -37,11 +37,11 @@
                         {% endif %}
 
                         {% if item.admin_check %}
-                            <td>{{ item.admin_at|date:"m/d/y h:i a" }}</td>
+                            <td><p>{{ item.admin_at|date:"m/d/y h:i a" }}</p></td>
                         {% else %}
                             <td>
                                 {% if user.is_superuser %}
-                                    <center><a href="{% url 'checkout_url' %}">Checkout</a></center>
+                                    <center><a href="{% url 'searchout_url' %}">Checkout</a></center>
                                 {% else %}
                                     <center>-</center>
                                 {% endif %}

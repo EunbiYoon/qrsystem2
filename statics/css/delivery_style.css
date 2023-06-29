@@ -246,6 +246,7 @@ body{
     color:green;
     font-weight: 600;
     background-color:white;
+    text-align: center;
 }
 .search-detail input::placeholder{
     color:green;
@@ -260,7 +261,11 @@ body{
     color:black;
     text-align: center;
 }
-.search-detail td a{
+.search-detail table td p{
+    margin-bottom:0;
+    text-align: center;
+}
+.search-detail table td a{
     background-color:green;
     color:whitesmoke;
     border-radius:5px;
