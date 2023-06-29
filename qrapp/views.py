@@ -30,8 +30,10 @@ def checkoutView(request):
     if request.method=='POST':
         scan_track=request.POST.get('result')
         user_authority=request.user
+        print(scan_track)
         #remove input 4 digit space
         scan_track=scan_track.replace(" ","")
+        print(scan_track)
         #check code_data exist
         try:
             entry=QRCodeData.objects.get(code_data=scan_track)
@@ -51,7 +53,7 @@ def checkoutView(request):
                         "message":"Admin checkout successfully!",
                     }
                     return render(request,'msg_success.html', context=context)
-            elif user_authority.is_staff:
+            else:
                 if user_check_last==True:
                     context={
                         "error":"Receiver already checkout!"
@@ -65,11 +67,6 @@ def checkoutView(request):
                         "message":"Receiver checkout successfully!"
                     }
                     return render(request,'msg_success.html', context=context)
-            else:
-                context={
-                    "error":"User Authority Type Error..."
-                }
-                return render(request,'msg_fail.html', context=context)
         except QRCodeData.DoesNotExist:
             context={
                 "error":"Tracking number not exists!"
