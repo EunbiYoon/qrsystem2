@@ -114,6 +114,7 @@ def checkoutView(request):
                     }
                     return render(request,'msg_fail.html', context=context)
                 else:
+                    
                     entry.receiver_check=True
                     entry.receiver_at=timezone.now()
                     entry.save()

@@ -4,7 +4,7 @@ function copyText(element){
         element.textContent='Copied!';
         setTimeout(function(){
             element.innerHTML=textToCopy+' <i class="fa fa-copy"></i>';
-        }, 2000);
+        }, 1000);
     })
     .catch(function (error){
         console.error('Unable to copy text: ',error)
