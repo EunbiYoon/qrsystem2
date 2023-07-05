@@ -82,10 +82,11 @@ def checkoutView(request):
     if request.method=='POST':
         scan_track=request.POST.get('result')
         user_authority=request.user
-        print(scan_track)
+        user_name=request.user.username
+
         #remove input 4 digit space
         scan_track=scan_track.replace(" ","")
-        print(scan_track)
+
         #check code_data exist
         try:
             entry=QRCodeData.objects.get(code_data=scan_track)
@@ -114,14 +115,19 @@ def checkoutView(request):
                     }
                     return render(request,'msg_fail.html', context=context)
                 else:
-                    
-                    entry.receiver_check=True
-                    entry.receiver_at=timezone.now()
-                    entry.save()
-                    context={
-                        "message":"Receiver checkout successfully!"
-                    }
-                    return render(request,'msg_success.html', context=context)
+                    if user_name==entry.receiver:
+                        entry.receiver_check=True
+                        entry.receiver_at=timezone.now()
+                        entry.save()
+                        context={
+                            "message":"Receiver checkout successfully!"
+                        }
+                        return render(request,'msg_success.html', context=context)
+                    else:
+                        context={
+                            "error":"This is not your package!"
+                        }
+                        return render(request,'msg_fail.html', context=context)
         except QRCodeData.DoesNotExist:
             context={
                 "error":"Tracking number not exists!"
