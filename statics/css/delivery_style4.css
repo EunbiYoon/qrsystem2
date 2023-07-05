@@ -290,17 +290,19 @@ body{
     width: 16;
     height: 16;
 }
-.search-detail td button i{
+.search-detail td i{
     cursor: pointer;
     margin:0;
     padding:0;
     color:white;
+    background-color: #292929;
+    padding: 5px 2px;
 }
-.search-detail td button:hover{
-    background-color:white;
-}
-.search-detail td button i:hover{
+.search-detail td i:hover{
     color:#292929;
+    background-color: white;
+    border:1px solid #292929;
+    padding: 4px 1px;
 }
 
 /* checkout.html */

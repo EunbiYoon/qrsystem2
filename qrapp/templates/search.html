@@ -21,7 +21,7 @@
             <tbody>
                 {% for item in item_list %}
                     <tr>
-                        <td onclick="copyText(this)"><p class="track_number">{{ item.code_data }} <button><i class="fa fa-copy"></i></button></p></td>
+                        <td onclick="copyText(this)"><p class="track_number">{{ item.code_data }} <i class="fa fa-copy"></i></p></td>
                         <td><p>{{ item.arriving_at|date:"m/d/y h:i a" }}</p></td>
                         <td><p>{{ item.receiver }}</p></td>
 

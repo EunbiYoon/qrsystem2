@@ -3,7 +3,7 @@ function copyText(element){
     navigator.clipboard.writeText(textToCopy).then(function(){
         element.textContent='Copied!';
         setTimeout(function(){
-            element.innerHTML=textToCopy+' <button><i class="fa fa-copy"></i></button>';
+            element.innerHTML=textToCopy+' <i class="fa fa-copy"></i>';
         }, 2000);
     })
     .catch(function (error){
