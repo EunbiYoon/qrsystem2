@@ -265,6 +265,9 @@ body{
     margin-bottom:0;
     text-align: center;
 }
+.search-detail table td .track_number{
+    text-align: left;
+}
 .search-detail table td a{
     background-color:green;
     color:whitesmoke;
@@ -280,14 +283,24 @@ body{
     color:green;
     border: 2px solid green;
 }
-.search-detail td i{
-    color:red;
-    background-color: pink;
-    cursor: pointer;
+.search-detail td button{
+    padding:0;
+    margin:0;
+    background-color: #292929;
+    width: 16;
+    height: 16;
 }
-.search-detail td i:hover{
-    color:green;
-    background-color:greenyellow;
+.search-detail td button i{
+    cursor: pointer;
+    margin:0;
+    padding:0;
+    color:white;
+}
+.search-detail td button:hover{
+    background-color:white;
+}
+.search-detail td button i:hover{
+    color:#292929;
 }
 
 /* checkout.html */
