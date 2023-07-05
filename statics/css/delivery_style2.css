@@ -280,7 +280,15 @@ body{
     color:green;
     border: 2px solid green;
 }
-
+.search-detail td i{
+    color:red;
+    background-color: pink;
+    cursor: pointer;
+}
+.search-detail td i:hover{
+    color:green;
+    background-color:greenyellow;
+}
 
 /* checkout.html */
 .checkout{

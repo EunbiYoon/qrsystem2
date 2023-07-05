@@ -21,7 +21,7 @@
             <tbody>
                 {% for item in item_list %}
                     <tr>
-                        <td><p id="track_number">{{ item.code_data }} <i style="background-color:pink; color:red" class="fa fa-copy"></i></p></td>
+                        <td onclick="copyText(this)"><p>{{ item.code_data }} <i class="fa fa-copy"></i></p></td>
                         <td><p>{{ item.arriving_at|date:"m/d/y h:i a" }}</p></td>
                         <td><p>{{ item.receiver }}</p></td>
 
@@ -57,4 +57,24 @@
     <script src="{% static 'js/search.js' %}"></script>
     <script src="{% static 'js/copytext.js' %}"></script>
     <script src="https://use.fontawesome.com/694dc84b9e.js"></script>
+    <script>
+        // function copyText(element){
+        //     var textToCopy=element.textContent;
+        //     navigator.clipboard.writeText(textToCopy).catch(function(error){
+        //         console.error("Unable to copy", error)
+        //     });
+        // }
+        function copyText(element){
+            var textToCopy=element.textContent;
+            navigator.clipboard.writeText(textToCopy).then(function(){
+                element.textContent='Copied!';
+                setTimeout(function(){
+                    element.textContent=textToCopy;
+                }, 2000);
+            })
+            .catch(function (error){
+                console.error('Unable to copy text: ',error)
+            });
+        }
+    </script>
 {% endblock %}
