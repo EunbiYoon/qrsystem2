@@ -115,6 +115,7 @@ def checkoutView(request):
                     }
                     return render(request,'msg_fail.html', context=context)
                 else:
+                    #check receiver and username matching
                     if user_name==entry.receiver:
                         entry.receiver_check=True
                         entry.receiver_at=timezone.now()
